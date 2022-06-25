@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<link>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/favicon.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>YSY A</title>
+</head>
+<body class="bg-img bodyscroll">
+    <nav class="bg-grey nav">   
+        <a href="../index.html">
+            <img class="logonav" src="../img/Ysy logo.png" alt="logo de YSY A">
+        </a>
+
+        <ul>
+            <li>
+                <a href="../index.html">Home</a>
+            </li>
+            <li>
+                <a href="../views/conocelo.html">Conocelo</a>
+            </li>
+            <li>
+                <a href="../views/discografia.html">Discografía</a>
+            </li>
+            <li>
+                <a href="../views/comprar.html">Compra tu disco</a>
+            </li>
+            <li>
+                <a href="../views/noticias.html">Noticias</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="intro">
+        <h1 class="bordeintro">Compra tu disco</h1>
+    </div>
+    <main id="grid-shop">
+        <header class="main">
+            <div class="main__tx1 text-s">
+                <h2>¡No te quedes sin tu disco favorito de YSY A!</h2>
+            </div>
+            <div class="main-shop">
+                <div class="main-shop1">
+                    <figure>
+                        <img src="../img/antezana.jpg" alt="Foto del Disco Antezana 247">
+                        <figcaption>Antezana 247</figcaption>
+                        <p class="txt-orng">$2.800,00</p>
+                    </figure>
+                    <figure>
+                        <img src="../img/hechoamano.jpg" alt="Foto del Disco Hecho a mano">
+                        <figcaption>Hecho a mano</figcaption>
+                        <p class="txt-orng">$2.800,00</p>
+                    </figure>
+                </div>
+                <div class="main-shop2">
+                    <figure>
+                        <img src="../img/melbozal.jpg" alt="Foto del Disco Mordiendo   el bozal">
+                        <figcaption>Mordiendo el bozal</figcaption>
+                        <p class="txt-orng">$2.500,00</p>
+                    </figure>
+
+                    <figure>
+                        <img src="../img/trapdeverdad.png" alt="Foto del Disco Trap de verdad">
+                        <figcaption>Trap de verdad</figcaption>
+                        <p class="txt-orng">$3.200,00</p>
+                    </figure>
+                </div>
+            </div>
+            <div class="snd-txt">
+                <h3>LLevate también una remera de “Sponsor Dios” o  el cómic de YSY A “Génesis de un movimiento”</h3>
+            </div>
+            <div class="snd-shop">
+                <figure>
+                    <img width="250px" src="../img/remeraysy.jpg" alt="remera de sponsor dios">
+                    <figcaption>Remera "SponsorDios"</figcaption>
+                    <p class="txt-orng">$1.700</p>
+                </figure>
+
+                <figure>
+                    <img width="230px" src="../img/ysycomic.jpg" alt="comic de ysy a">
+                    <figcaption>Comic "Genesis de un movimiento"</figcaption>
+                    <p class="txt-orng">$1.400</p>
+                </figure>
+            </div>
+        </header>
+
+        <!-- inicia form -->
+    <section id="pedido" class="shop">
+        <div class="box">
+            <div class="box__text">
+                <h3 class="txt-black">Hace tu pedido</h3>
+            </div>
+            <form action="envio.php" id="comprar">
+                <fieldset>
+                    <legend class="legend-tx">Informacion Personal</legend>
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" placeholder="Escribi tu nombre">
+                    <br>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Ingresa tu mail">
+                </fieldset>
+                <fieldset>
+                    <legend class="legend-tx"> Tu pedido</legend>
+                    <label for="discos">Elegi tu disco</label>
+                    <select name="discos" id="discos">
+                        <option value="">Selecciona una opcion</option>
+                        <option value="antezana">Antezana 247</option>
+                        <option value="hechoamano">Hecho a mano</option>
+                        <option value="mordiendoelbozal">Mordiendo el bozal</option>
+                        <option value="trapdeverdad">Trap de verdad</option>
+                    </select>
+                    <br>
+                    <label for="remera">+ Remera Sponsor Dios</label>
+                    <input type="checkbox" id="remera" value="remera">
+                    <br>
+                    <label for="poster">+ Poster de YSY A</label>
+                    <input type="checkbox" id="poster" value="poster">
+                </fieldset>
+                <fieldset>
+                    <legend class="legend-tx">Tu envio</legend>
+                    <label for="correo">Retiro en el correo</label>
+                    <input type="radio" name="envio" id="correo" value="correo">
+                    <br>
+                    <label for="domicilio">Envio a domicilio</label>
+                    <input type="radio" name="envio" id="domicilio" value="domicilio">
+                    <br>
+                    <label for="provincia">Provincia</label>
+                    <select name="provincia" id="provincia">
+                        <option value="">Selecciona una opcion</option>
+                        <option value="bsas">Buenos Aires</option>
+                        <option value="caba">CABA</option>
+                        <option value="interior">Interior del pais</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                <label class="legend-tx" for="mensaje">Deja tu mensaje</label>
+                <br>
+                <textarea name="mensaje" id="mensaje" placeholder="Escribe aqui" cols="20" rows="8"></textarea>
+                <br>
+                <input type="reset" value="Cancelar">
+                <input type="submit" value="Enviar">
+                </fieldset>
+            </form>
+        </div>
+        </section>
+        <!-- ends form -->
+    </main>
+    <footer class="bg-grey pie">
+        <h3 class="pie__text">Redes Sociales</h3>
+        <div>
+        <a href="https://open.spotify.com/artist/2qWK8K2Jfh67UqtwY8tCW6" target="_blank">
+            <img class="pie-img" src="../img/spotify.png" alt="logo de spotify">
+        </a>
+        </div>
+        <div>
+        <a href="https://www.instagram.com/ysy__a/" target="_blank">
+            <img class="pie-img" src="../img/instagram.png" alt="logo de instagram">
+        </a>
+        </div>
+        <div>
+        <a href="https://twitter.com/ysy__a" target="_blank">
+            <img class="pie-img" src="../img/twitter.png" alt="logo de twitter">
+        </a>
+        </div>
+        <div>
+        <a href="https://www.youtube.com/channel/UC6ZqzTu-T77_yp1TCIIy93g" target="_blank">
+            <img class="pie-img" src="../img/youtube.png" alt="logo de youtube">
+        </a>
+        </div>
+    </footer>
+</body>
+</html>

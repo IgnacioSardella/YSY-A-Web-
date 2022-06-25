@@ -1,0 +1,694 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:ital@1&family=Source+Sans+Pro:ital,wght@0,600;1,400&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html{
+	font-size: 62.5%;
+    font-family: sans-serif;
+    height: 100vh;
+
+}
+
+body{
+    min-height: 100vh;
+    width: 100%;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+h1,
+h2,
+h3{
+	font-family: 'Source Sans Pro', sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+/* grid index - mobile first */
+#contenedor-grid{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 15vh 1fr 7.8vh;
+    grid-template-areas:
+    "nav"
+    "main"
+    "pie";
+    
+}
+
+
+/* g areas */
+.nav{
+    grid-area: nav;
+}
+
+.main{
+    grid-area: main;
+}
+
+.pie{
+    grid-area: pie;
+}
+
+.shop{
+    grid-area: shop;
+}
+
+.main-shop{
+    grid-area: discos;
+}
+
+.snd-shop{
+    grid-area: extra;
+}
+
+
+.txt-gold{
+    color: rgb(155, 126, 31);
+}
+.txt-orng{
+    color: rgb(216, 114, 19);
+}
+.txt-white{
+    color: white;
+}
+.txt-brown{
+    color: rgb(177, 147, 108);
+}
+.txt-black{
+    color: rgb(0, 0, 0);
+}
+
+.bg-black{
+	background-color: rgb(0, 0, 0);
+}
+
+.bg-grey{
+    background-color: rgb(19, 19, 19);
+}
+
+.bg-img{
+    background-image: url(../img/fondoysy.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    max-height: 100vh;
+}
+
+.img-m{
+    width: 40vw;
+}
+
+/* nav standard */
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+    nav img{
+        width: 10vw;
+        margin-top: 5%;
+    }
+    nav ul{
+        display: flex;
+        list-style: none;
+    }
+    nav ul li{
+        padding: 0vw 3vw;
+        font-size: 1rem;
+    }
+    nav ul li a{
+        text-decoration: none;
+        color:rgb(216, 114, 19) ;
+        font-weight: 600;
+    }
+
+    /* main index*/
+main header{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    main header section.titulo__uno{
+        order: 1;
+        margin-top: 5%;
+        padding: 2%;
+    }
+    main header section div.imgxl{
+        text-align: center;
+        width: 90vw;
+        padding-top: 5%;
+    }
+    main header section h1{
+        text-align: center;
+        font-size: 2.2rem;
+        font-family: 'Source Sans Pro', sans-serif;
+        text-transform: capitalize;
+        padding-bottom: 1%;
+    }
+    main header section.titulo__dos{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        order: 2;
+        width: 80vw;
+        padding: 6vh 3vw;
+    }
+    main header section h3{
+        padding: 5%;
+        font-size: 1.6rem;
+        color: rgb(197, 197, 197);
+    }
+    /* fin main index */
+
+    /* main shop */
+
+main#grid-shop{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    }
+    div.intro {
+        text-align: center;
+        font-size: 3rem;
+    }
+    .bordeintro {
+        width: 75%;
+        border-bottom: solid rgb(216, 114, 19) 0.4vw;
+        padding: 2%;
+        font-size: 4vh;
+    }
+    main header div h2{
+        font-size: 2rem;
+        text-align: center;
+    }
+    div.main-shop{
+        padding: 2%;
+    }
+    div.main-shop1{
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        margin: 5px;
+    }
+    div.main-shop2{
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        margin: 5px;
+    }
+    header figure{
+        padding: 5%;
+    }
+    header figure figcaption{
+        text-align: center;
+        color: white;
+        font-size: 1.2rem;
+        font-weight: 600;
+        padding-top: 2%;
+    }
+    header figure p{
+        text-align: center;
+        font-size: 0.9rem;
+        font-weight: 800;
+        padding-bottom: 2%;
+    }
+    div.main-shop figure img{
+        max-width: fit-content;
+        max-height: 20vh;
+    }
+    div.snd-txt h3{
+        text-align: center;
+        padding: 5%;
+        font-size: 1.6rem;
+    }
+    div.snd-shop{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: row nowrap;
+    }
+    div.snd-shop figure{
+        margin: 1% 5%;
+    }
+
+    .box {
+        background-color: #6558f5;
+    }
+    .box__text{
+        text-align: center;
+        font-size: 1.8rem;
+        margin: 3px;
+        text-transform: uppercase;
+        text-decoration: underline;
+    }
+    .legend-tx{
+        font-weight: bold;
+        padding: 2px;
+    }
+    #pedido{
+        padding: 5%;
+    }
+    #pedido div form{
+        padding: 5px;
+    }
+    #pedido div form fieldset{
+        padding: 10px;
+        margin: 5px;
+        font-size: 1.3rem;
+        background-color: grey;
+        border: none;
+    }
+/* fin shop */
+
+/* footer standard */
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin-top: 5vh;
+}
+    footer h3{
+        font-size: 1.2rem;
+    }
+    footer img{
+        width: 5vw;
+        max-height: 10vh;
+    }
+
+/* --- media queries --- */
+
+@media (min-width: 768px){
+    nav{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+        nav div a img{
+            width: 10vw;
+            margin-left: 6vw;
+            padding-right: 2vw;
+        }
+        nav ul{
+            justify-content: flex-end;
+        }
+        nav ul li{
+            padding: 0% 2vw;
+        }
+        nav ul li a{
+            font-size: 1.6rem;
+        }
+/* shop */
+    .bordeintro {
+        font-size: 4rem;
+    }
+    main header div h2{
+        font-size: 3rem;
+    }
+    header figure figcaption{
+        font-size: 1.4rem;
+    }
+    header figure p{
+        font-size: 1.2rem;
+    }
+    div.snd-txt h3{
+        max-width: 90vw;
+        font-size: 2rem;
+    }
+    .box__text{
+        font-size: 2.2rem;
+    }
+    #pedido div form fieldset{
+        font-size: 1.6rem;
+    }
+/* fin shop */
+
+    footer{
+        font-size: 2rem;
+
+    }
+    footer div img{
+        width: 4vh;
+        max-height: 100%;
+    }
+
+}
+
+@media (min-width: 1200px){
+    /* nav standard 1200 */
+    nav{
+        display: flex;
+        position: sticky;
+        top: 0;
+        left: 0;
+    }
+        nav div a img{
+            width: 7.5vw;
+            margin-left: 6vw;
+            padding-right: 4vw;
+        }
+
+        nav ul{
+            width: 75%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+            nav ul li{
+                list-style: none;
+                padding: 2vw;
+                font-family: 'Saraburn', sans-serif;
+            }
+
+                nav ul li a{
+                    font-size: 3.2rem;
+                    font-weight: 400;
+                    font-style: italic;
+                    text-decoration: none;
+                    color:rgb(216, 114, 19) ;
+                }
+
+    /* main index */
+    main header{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        border-top: none;
+    }
+        main header section.titulo__uno{
+            margin: 0% 5%;
+            padding: 2% 1% 1% 0%;
+        }
+            main header section h1{
+                justify-content: center;
+                text-align: center;
+                color: rgb(255, 255, 255);
+                font-size: 4.3rem;
+                font-family: 'Source Sans Pro', sans-serif;
+                text-transform: capitalize;
+            }
+            main header section div.imgxl{
+                text-align: center;
+                width: fit-content;
+                padding-top: 0%;
+            }
+        main header section.titulo__dos{
+            flex-direction: column;
+            width: fit-content;
+            position: relative;
+            left: 8vw; top: 18vh;
+        }
+        main header section h3{
+            text-align: center;
+            font-size: 3rem;
+            font-family: 'Source Sans Pro', sans-serif;
+            text-transform: capitalize;
+        }
+    /* fin main index */
+    /* main shop */
+    main#grid-shop{
+        display: grid;
+        grid-template: 
+        "nav nav nav" 0vh
+        "main main shop" 1fr
+        "main main ." 1fr
+        "pie pie pie" 10vh /
+        25vw 35vw 25vw;
+    }
+    div.main-shop figure img {
+        max-width: fit-content;
+        max-height: 25vh;
+    }
+    main#grid-shop header{
+        flex-direction: column;
+        border-top: none;
+    }
+    main header div h2{
+        font-size: 3.5rem;
+    }
+    header figure img{
+        width: 100%;
+    }
+    header div.snd-shop img{
+        width: 20vw;
+    }
+    header figure figcaption{
+        font-size: 2.2rem;
+    }
+    header figure p{
+        font-size: 1.8rem;
+    }
+    div.snd-txt h3{
+        max-width: 40vw;
+        font-size: 2.8rem;
+    }
+    .box__text{
+        font-size: 3.2rem;
+    }
+    #pedido{
+        position: sticky;
+        top: 15%;
+    }
+    #pedido div form fieldset{
+        font-size: 2.8rem;
+    }
+    #pedido div form fieldset input{
+        font-size: 1.8rem;
+    }
+    #pedido div form fieldset select{
+        font-size: 1.8rem;
+    }
+    #pedido div form fieldset textarea{
+        font-size: 1.8rem;
+    }
+
+    footer{
+        margin-top: 0;
+    }
+        footer h3{
+            font-size: 4vh;
+        }
+        footer div a img{
+            width: 2.6vw;
+        }
+
+    /* clases */
+    .bodyscroll{
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 100%;
+        min-height: 100%;
+    }
+    .bordeintro {
+        font-size: 6rem;
+    }
+    .imgxl{
+        height: 62vh;
+    }
+    .img-m{
+        width: 13vw;
+    }
+    .text-xs{
+        font-size: 1.5rem;
+    }
+    .text-s{
+        font-size: 2rem;
+    }
+    .text-m{
+        font-size: 3rem;
+    }
+    .text-l{
+        font-size: 4rem;
+    }
+    .text-xl{
+        font-size: 5rem;
+    }
+}
+
+
+
+
+/* conocelo */
+
+.intro{
+    display: flex;
+    justify-content: center;
+}
+
+
+.main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 9px;
+    padding-bottom:8px;
+    width: auto;
+}
+.borde{
+    border-top: solid rgb(216, 114, 19) medium;
+    padding: 0.2vw;
+}
+
+/* historia */
+
+.main__historia{
+    display: flex;
+    justify-content: end;
+    flex-flow: row nowrap;
+    box-sizing: content-box;
+    width: 100%;
+    margin: 20px;
+}
+.main__historia--textos{
+    margin-left: 20px;
+    box-sizing: border-box;
+    width: 20%;
+}
+.main__historia--txgde{
+    font-size: 4rem;
+}
+.main__historia--prg{
+    font-size: 2rem;
+    color: white;
+}
+
+/* alejo */
+
+.main__alejo{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    margin: 50px;
+}
+.main__alejo--textos{
+    order: 0;
+    display: flex;
+    justify-content: center;
+    align-self: baseline;
+    flex-flow: column nowrap;
+    box-sizing: content-box;
+    padding: 0px 50px;
+    width: 50%;
+}
+.main__alejo--txgde{
+    font-size: 3.2rem;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.main__alejo--prg{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+}
+.main__alejo--img{
+    order: -1;
+    width: 30%;
+}
+.main.main__alejo--quinto{
+    order: 2;
+}
+
+/* sponsordios */
+
+.main__sdios{
+    display: flex;
+    justify-content: center;
+}
+.main__sdios--textos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    margin-right: 20px;
+    box-sizing: border-box;
+    width: 12.5%;
+}
+.main__sdios--txgde{
+    font-size: 3.2rem;
+    color: rgb(150, 150, 150);
+}
+.main__sdios--prg{
+    justify-content: end;
+    font-size: 1.5rem;
+    color: white;
+}
+/* fin conocelo */
+
+
+/* discografia */
+
+/* tabla */
+.main-disc{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+}
+.main__tx1{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+.main__table{
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    border: none;
+    empty-cells: hide;
+    margin-bottom: 55px;
+}
+.table-th{
+    background-color: rgb(206, 103, 30);
+    padding: 15px;
+}
+.table-td{
+    color: white;
+}
+/* portadas */
+
+
+.tapas{
+    margin-top: 55px;
+}
+.tapas__texto{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 35px;
+}
+.tapas__img{
+    display: flex;
+    justify-content: space-evenly;
+}
+.disc-w{
+    width: 30vh;
+}
+/* fin discografia */
+
+
+
+
+/* inicia about */
+.main__tour{
+    display: flex;
+    justify-content: center;
+    width: 100%
+}
