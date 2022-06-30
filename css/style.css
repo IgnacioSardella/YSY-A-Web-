@@ -193,6 +193,9 @@ main#grid-shop{
         font-size: 2rem;
         text-align: center;
     }
+    .row{
+        justify-content: center;
+    }
     div.main-shop{
         padding: 2%;
     }
@@ -214,7 +217,7 @@ main#grid-shop{
     header figure figcaption{
         text-align: center;
         color: white;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         font-weight: 600;
         padding-top: 2%;
     }
@@ -225,7 +228,6 @@ main#grid-shop{
         padding-bottom: 2%;
     }
     div.main-shop figure img{
-        max-width: fit-content;
         max-height: 20vh;
     }
     div.snd-txt h3{
@@ -331,6 +333,14 @@ footer{
     .box__text{
         font-size: 2.2rem;
     }
+    .boxform{
+        display: flex;
+        justify-content: center;
+    }
+    #pedido{
+        width: fit-content;
+        margin: 0;
+    }
     #pedido div form fieldset{
         font-size: 1.6rem;
     }
@@ -355,7 +365,7 @@ footer{
         border-top: none;
     }
     main.borde{
-        padding-bottom: 2.58%;
+        padding-bottom: 1.55%;
     }
         main header section.titulo__uno{
             margin: 0% 5%;
@@ -388,6 +398,7 @@ footer{
         }
     /* fin main index */
     /* main shop */
+
     main#grid-shop{
         display: grid;
         grid-template: 
@@ -396,22 +407,8 @@ footer{
         "pie pie pie" 10vh /
         25vw 35vw 25vw;
     }
-    div.main-shop figure img {
-        max-width: fit-content;
-        max-height: 25vh;
-    }
-    main#grid-shop header{
-        flex-direction: column;
-        border-top: none;
-    }
     main header div h2{
         font-size: 3.5rem;
-    }
-    header figure img{
-        width: 100%;
-    }
-    header div.snd-shop img{
-        width: 20vw;
     }
     header figure figcaption{
         font-size: 2.2rem;
@@ -419,16 +416,8 @@ footer{
     header figure p{
         font-size: 1.8rem;
     }
-    div.snd-txt h3{
-        max-width: 40vw;
-        font-size: 2.8rem;
-    }
     .box__text{
         font-size: 3.2rem;
-    }
-    #pedido{
-        position: sticky;
-        top: 15%;
     }
     #pedido div form fieldset{
         font-size: 2.8rem;
@@ -441,8 +430,13 @@ footer{
     }
     #pedido div form fieldset textarea{
         font-size: 1.8rem;
+    } 
+    footer.pie-index{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
     }
-    
         footer h3{
             font-size: 3rem;
         }
