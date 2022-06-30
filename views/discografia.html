@@ -4,45 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YSY A</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="shortcut icon" href="../img/favicon.png">
     <link rel="stylesheet" href="../css/style.css">
+    <title>YSY A</title>
 </head>
 <body class="bg-img bodyscroll">
-    <nav class="bg-grey">   
-        <a href="../index.html">
-            <img class="logonav" src="../img/Ysy logo.png" alt="logo de YSY A">
-        </a>
-        <ul>
-            <li>
-                <a href="../index.html">Home</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-grey sticky-top" id="botonera">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html"><img src="../img/Ysy logo.png" alt="logo de ysy a"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="../views/conocelo.html">Conocelo</a>
             </li>
-            <li>
-                <a href="../views/conocelo.html">Conocelo</a>
+            <li class="nav-item">
+                <a class="nav-link" href="../views/discografia.html">Discografía</a>
             </li>
-            <li>
-                <a href="../views/discografia.html">Discografía</a>
+            <li class="nav-item">
+                <a class="nav-link" href="../views/comprar.html">Compra tu disco</a>
             </li>
-            <li>
-                <a href="../views/comprar.html">Compra tu disco</a>
+            <li class="nav-item">
+                <a class="nav-link" href="../views/noticias.html">Noticias</a>
             </li>
-            <li>
-                <a href="../views/noticias.html">Noticias</a>
-            </li>
-        </ul>
+        </div>
+        </div>
     </nav>
     <div class="intro">
         <h1 class="text-h1 bordeintro">Discografía</h1>
     </div>
     <main class="main-disc">
-        <div class="main">
-            <div class="main__tx1 text-l">
-                <h2 class="txt-gold">Discos de YSY A</h2>
+        <div class="mainabout">
+            <div class="main__tx1">
+                <h2 class="txt-gold text-l">Discos de YSY A</h2>
             </div>
             <!-- inicia form -->
             <section>
                 <table border="3px" cellpadding="6px" cellspacing="6px" class="main__table">
-                    <tbody class="bg-black">
+                    <tbody class="bg-black" id="table-border">
                         <tr>
                             <th class="table-th text-s">Antezana 247</th>
                             <th class="table-th text-s">Hecho a mano</th>
@@ -133,8 +135,8 @@
             <!-- ends form -->
             <br>
             <div class="tapas">
-                <div class="tapas__texto text-m">
-                    <h3 class="txt-brown">Portadas de los Discos</h3>
+                <div class="tapas__texto">
+                    <h3 class="txt-brown text-m">Portadas de los Discos</h3>
                 </div>
                 <div class="tapas__img">
                     <img class="disc-w" src="../img/antezana.jpg" alt="Foto del Disco Antezana 247">
@@ -168,5 +170,7 @@
         </a>
         </div>
     </footer>
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

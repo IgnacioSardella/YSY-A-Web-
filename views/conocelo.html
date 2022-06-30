@@ -5,40 +5,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YSY A</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="shortcut icon" href="../img/favicon.png">
     <link rel="stylesheet" href="../css/style.css">
+    <title>YSY A</title>
 </head>
 <body class="bg-img bodyscroll">
-    <nav class="bg-grey">   
-        <a href="../index.html">
-            <img class="logonav" src="../img/Ysy logo.png" alt="logo de YSY A">
-        </a>
-        <ul>
-            <li>
-                <a href="../index.html">Home</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-grey sticky-top" id="botonera">
+        <div class="container-fluid px-0">
+        <a class="navbar-brand" href="../index.html"><img src="../img/Ysy logo.png" alt="logo de ysy a"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="../views/conocelo.html">Conocelo</a>
             </li>
-            <li>
-                <a href="../views/conocelo.html">Conocelo</a>
+            <li class="nav-item">
+                <a class="nav-link" href="../views/discografia.html">Discografía</a>
             </li>
-            <li>
-                <a href="../views/discografia.html">Discografía</a>
+            <li class="nav-item">
+                <a class="nav-link" href="../views/comprar.html">Compra tu disco</a>
             </li>
-            <li>
-                <a href="../views/comprar.html">Compra tu disco</a>
+            <li class="nav-item">
+                <a class="nav-link" href="../views/noticias.html">Noticias</a>
             </li>
-            <li>
-                <a href="../views/noticias.html">Noticias</a>
-            </li>
-        </ul>
+        </div>
+        </div>
     </nav>
     <div class="intro">
         <h1 class="bordeintro">¿ Quien es YSY A ?</h1>
     </div>
     <main>
-        <header class="main">
+        <header class="mainabout">
             <div class="main__historia">
-                <img width="420px" src="../img/Ysy conocelo.jpg" alt="Foto de YSY A vestido de traje">
+                <img src="../img/Ysy conocelo.jpg" alt="Foto de YSY A vestido de traje">
                 <div class="main__historia--textos">
                     <h2 class="main__historia--txgde txt-orng">
                         Su historia
@@ -95,5 +97,7 @@
         </a>
         </div>
     </footer>
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

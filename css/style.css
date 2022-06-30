@@ -8,12 +8,9 @@
 html{
 	font-size: 62.5%;
     font-family: sans-serif;
-    height: 100vh;
-
 }
 
 body{
-    min-height: 100vh;
     width: 100%;
 }
 
@@ -31,16 +28,13 @@ h3{
 
 /* grid index - mobile first */
 #contenedor-grid{
-    height: 100vh;
-    width: 100vw;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 15vh 1fr 7.8vh;
+    grid-template-rows: 1fr 5.5vh;
     grid-template-areas:
-    "nav"
     "main"
     "pie";
-    
 }
 
 
@@ -107,37 +101,39 @@ h3{
 }
 
 /* nav standard */
-nav{
-    display: flex;
-    flex-direction: column;
+#botonera{
     align-items: center;
-    justify-content: center;
-    position: sticky;
-    top: 0;
-    left: 0;
     background: linear-gradient(to right, black, rgb(19, 19, 19), rgb(35, 35, 35));
 }
-    nav img{
-        width: 10vw;
-        margin-top: 5%;
-    }
-    nav ul{
+#botonera div.container-fluid{
+    padding: 0px 30px 0px 5%;
+}
+#botonera a.navbar-brand{
+    width: 9vw;
+    margin-left: 5%;
+    margin-right: 0px;
+} 
+#botonera ul a{
+	color: rgb(216, 114, 19);
+	font-size: 1.2rem;
+	font-weight: 600;
+}
+    #botonera ul{
         display: flex;
         list-style: none;
     }
-    nav ul li{
+    #botonera ul li{
         padding: 0vw 3vw;
         font-size: 1rem;
+        list-style: none;
+        font-family: 'Saraburn', sans-serif;
     }
-    nav ul li a{
-        text-decoration: none;
-        color:rgb(216, 114, 19) ;
-        font-weight: 600;
-    }
-    nav ul li a:hover{
+    #botonera ul li a:hover{
         color: rgb(197, 197, 197);
     }
-
+.navbar-collapse{
+    padding-right: 5%;
+}
     /* main index*/
 main header{
         display: flex;
@@ -147,13 +143,11 @@ main header{
     }
     main header section.titulo__uno{
         order: 1;
-        margin-top: 5%;
         padding: 2%;
     }
     main header section div.imgxl{
         text-align: center;
         width: 90vw;
-        padding-top: 5%;
     }
     main header section h1{
         text-align: center;
@@ -284,30 +278,27 @@ footer{
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    width: 100%;
-    margin-top: 5vh;
+
 }
     footer h3{
         font-size: 1.2rem;
+        margin: 0;
     }
     footer img{
-        width: 5vw;
-        max-height: 10vh;
+        width: fit-content;
+        height: 2vh;
     }
 
 /* --- media queries --- */
 
 @media (min-width: 768px){
-    nav{
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
+
+    #botonera img{
+        width: 6vw;
+    } 
+    #botonera ul a{
+        font-size: 2rem;
     }
-        nav div a img{
-            width: 10vw;
-            margin-left: 6vw;
-            padding-right: 2vw;
-        }
         nav ul{
             justify-content: flex-end;
         }
@@ -316,7 +307,11 @@ footer{
         }
         nav ul li a{
             font-size: 1.6rem;
-        }
+        } 
+    
+    section.titulo__uno h1{
+        font-size: 3rem;
+    }
     .bordeintro {
         font-size: 4rem;
     }
@@ -339,71 +334,38 @@ footer{
     #pedido div form fieldset{
         font-size: 1.6rem;
     }
-/* fin shop */
-
-    footer{
-        font-size: 2rem;
-
-    }
-    footer div img{
-        width: 4vh;
-        max-height: 100%;
-    }
-
+    /* fin shop */
 }
 
 @media (min-width: 1200px){
     /* nav standard 1200 */
-    nav{
-        display: flex;
-        position: sticky;
-        top: 0;
-        left: 0;
+    #botonera img{
+        width: 8vw;
+    } 
+    #botonera ul a{
+        font-size: 3rem;
     }
-        nav div a img{
-            width: 7.5vw;
-            margin-left: 6vw;
-            padding-right: 4vw;
-        }
-
-        nav ul{
-            width: 75%;
-            height: auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-            nav ul li{
-                list-style: none;
-                padding: 2vw;
-                font-family: 'Saraburn', sans-serif;
-            }
-
-                nav ul li a{
-                    font-size: 3.2rem;
-                    font-weight: 400;
-                    font-style: italic;
-                    text-decoration: none;
-                    color:rgb(216, 114, 19) ;
-                }
 
     /* main index */
     main header{
         display: flex;
         flex-direction: row-reverse;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         border-top: none;
     }
+    main.borde{
+        padding-bottom: 2.58%;
+    }
         main header section.titulo__uno{
             margin: 0% 5%;
-            padding: 2% 1% 1% 0%;
+            padding: 1.5% 0%;
         }
-            main header section h1{
+            section.titulo__uno h1{
                 justify-content: center;
                 text-align: center;
                 color: rgb(255, 255, 255);
-                font-size: 4.3rem;
+                font-size: 5rem;
                 font-family: 'Source Sans Pro', sans-serif;
                 text-transform: capitalize;
             }
@@ -429,7 +391,6 @@ footer{
     main#grid-shop{
         display: grid;
         grid-template: 
-        "nav nav nav" 0vh
         "main main shop" 1fr
         "main main ." 1fr
         "pie pie pie" 10vh /
@@ -481,15 +442,12 @@ footer{
     #pedido div form fieldset textarea{
         font-size: 1.8rem;
     }
-
-    footer{
-        margin-top: 0;
-    }
+    
         footer h3{
-            font-size: 4vh;
+            font-size: 3rem;
         }
         footer div a img{
-            width: 2.6vw;
+            height: 4vh;
         }
 
     /* clases */
@@ -536,7 +494,7 @@ footer{
 }
 
 
-.main{
+.mainabout{
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -644,7 +602,6 @@ footer{
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    box-sizing: border-box;
 }
 .main__tx1{
     display: flex;
@@ -654,10 +611,15 @@ footer{
 .main__table{
     display: flex;
     justify-content: center;
-    box-sizing: border-box;
     border: none;
-    empty-cells: hide;
     margin-bottom: 55px;
+}
+#table-border tbody, td, tfoot, th, thead, tr{
+    border-color: rgb(22, 22, 22);
+    border-style: solid;
+    border-width: 1px;
+    padding: 6px;
+    empty-cells: hide;
 }
 .table-th{
     background-color: rgb(206, 103, 30);
@@ -682,7 +644,7 @@ footer{
     justify-content: space-evenly;
 }
 .disc-w{
-    width: 30vh;
+    width: 15%;
 }
 /* fin discografia */
 
