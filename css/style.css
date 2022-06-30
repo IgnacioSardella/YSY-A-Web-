@@ -173,12 +173,7 @@ main header{
 
     /* main shop */
 
-main#grid-shop{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    }
+
     div.intro {
         text-align: center;
         font-size: 3rem;
@@ -217,13 +212,13 @@ main#grid-shop{
     header figure figcaption{
         text-align: center;
         color: white;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         font-weight: 600;
         padding-top: 2%;
     }
     header figure p{
         text-align: center;
-        font-size: 0.9rem;
+        font-size: 1.3rem;
         font-weight: 800;
         padding-bottom: 2%;
     }
@@ -259,8 +254,16 @@ main#grid-shop{
         font-weight: bold;
         padding: 2px;
     }
+    .boxform{
+        display: flex;
+        justify-content: center;
+    }
+    .box__text h2{
+        font-size: 2rem;
+        padding-top: 5px;
+    }
     #pedido{
-        padding: 5%;
+        padding: 6%;
     }
     #pedido div form{
         padding: 5px;
@@ -271,6 +274,12 @@ main#grid-shop{
         font-size: 1.3rem;
         background-color: grey;
         border: none;
+    }
+    #pedido div form label{
+        font-weight: 500;
+    }
+    #pedido div form label:hover{
+        font-weight: 700;
     }
 /* fin shop */
 
@@ -321,10 +330,10 @@ footer{
         font-size: 3rem;
     }
     header figure figcaption{
-        font-size: 1.4rem;
+        font-size: 2rem;
     }
-    header figure p{
-        font-size: 1.2rem;
+    main header p{
+        font-size: 1.8rem;
     }
     div.snd-txt h3{
         max-width: 90vw;
@@ -333,15 +342,14 @@ footer{
     .box__text{
         font-size: 2.2rem;
     }
-    .boxform{
-        display: flex;
-        justify-content: center;
-    }
     #pedido{
         width: fit-content;
         margin: 0;
     }
-    #pedido div form fieldset{
+    #pedido div form fieldset legend{
+        font-size: 2rem;
+    }
+    #pedido div fieldset label{
         font-size: 1.6rem;
     }
     /* fin shop */
@@ -421,6 +429,12 @@ footer{
     }
     #pedido div form fieldset{
         font-size: 2.8rem;
+    }
+    #pedido div form fieldset legend {
+        font-size: 3rem;
+    }
+    #pedido div form fieldset label{
+        font-size: 2rem;
     }
     #pedido div form fieldset input{
         font-size: 1.8rem;
