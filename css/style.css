@@ -27,15 +27,7 @@ h3{
 }
 
 /* grid index - mobile first */
-#contenedor-grid{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 5.5vh;
-    grid-template-areas:
-    "main"
-    "pie";
-}
+
 
 
 /* g areas */
@@ -295,9 +287,8 @@ footer{
         font-size: 1.2rem;
         margin: 0;
     }
-    footer img{
-        width: fit-content;
-        height: 2vh;
+    footer div a img{
+        width: 3vw;
     }
 
 /* --- media queries --- */
@@ -352,6 +343,11 @@ footer{
     #pedido div fieldset label{
         font-size: 1.6rem;
     }
+    #pedido div form fieldset textarea{
+        font-size: 1.6rem;
+        width: 25em;
+        height: 8em;
+    } 
     /* fin shop */
 }
 
@@ -444,6 +440,8 @@ footer{
     }
     #pedido div form fieldset textarea{
         font-size: 1.8rem;
+        width: 30em;
+        height: 8em;
     } 
     footer.pie-index{
         position: absolute;
@@ -455,7 +453,7 @@ footer{
             font-size: 3rem;
         }
         footer div a img{
-            height: 4vh;
+            height: 6vh;
         }
 
     /* clases */
