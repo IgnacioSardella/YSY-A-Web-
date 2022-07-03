@@ -12,6 +12,9 @@ html{
 
 body{
     width: 100%;
+    position: relative;
+    padding-bottom: 3em;
+    min-height: 100vh;
 }
 
 img{
@@ -283,6 +286,11 @@ footer{
     align-items: center;
 
 }
+footer.pie-index{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
     footer h3{
         font-size: 1.2rem;
         margin: 0;
@@ -352,6 +360,10 @@ footer{
 }
 
 @media (min-width: 1200px){
+
+    body{
+        position: unset;
+    }
     /* nav standard 1200 */
     #botonera img{
         width: 8vw;
@@ -446,14 +458,14 @@ footer{
     footer.pie-index{
         position: absolute;
         bottom: 0;
-        left: 0;
-        right: 0;
+        width: 100%;
     }
         footer h3{
             font-size: 3rem;
         }
         footer div a img{
             height: 6vh;
+            width: 100%;
         }
 
     /* clases */
