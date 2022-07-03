@@ -446,9 +446,6 @@ footer.pie-index{
         width: 30em;
         height: 8em;
     } 
-    footer.pie-index{
-        margin-top: 1.5vh;
-    }
         footer h3{
             font-size: 3rem;
         }
@@ -462,7 +459,6 @@ footer.pie-index{
         overflow-x: hidden;
         overflow-y: auto;
         width: 100%;
-        min-height: 100%;
     }
     .bordeintro {
         font-size: 6rem;
