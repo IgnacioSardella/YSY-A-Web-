@@ -12,8 +12,8 @@ html{
 
 body{
     width: 100%;
-    position: relative;
-    padding-bottom: 3em;
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
 }
 
@@ -159,6 +159,9 @@ main header{
         width: 80vw;
         padding: 6vh 3vw;
     }
+    main header section.titulo__dos div img{
+        width: 30vw;
+    }
     main header section h3{
         padding: 5%;
         font-size: 1.6rem;
@@ -287,9 +290,7 @@ footer{
 
 }
 footer.pie-index{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    margin-top: auto;
 }
     footer h3{
         font-size: 1.2rem;
@@ -361,9 +362,7 @@ footer.pie-index{
 
 @media (min-width: 1200px){
 
-    body{
-        position: unset;
-    }
+
     /* nav standard 1200 */
     #botonera img{
         width: 8vw;
@@ -415,14 +414,6 @@ footer.pie-index{
     /* fin main index */
     /* main shop */
 
-    main#grid-shop{
-        display: grid;
-        grid-template: 
-        "main main shop" 1fr
-        "main main ." 1fr
-        "pie pie pie" 10vh /
-        25vw 35vw 25vw;
-    }
     main header div h2{
         font-size: 3.5rem;
     }
@@ -456,9 +447,7 @@ footer.pie-index{
         height: 8em;
     } 
     footer.pie-index{
-        position: absolute;
-        bottom: 0;
-        width: 100%;
+        margin-top: 1.5vh;
     }
         footer h3{
             font-size: 3rem;
