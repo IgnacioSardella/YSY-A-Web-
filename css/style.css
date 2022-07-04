@@ -91,6 +91,9 @@ h3{
     max-height: 100vh;
 }
 
+.borde{
+    border-top: solid rgb(216, 114, 19) medium;
+}
 .img-m{
     width: 40vw;
 }
@@ -505,10 +508,7 @@ footer.pie-index{
     padding-bottom:8px;
     width: auto;
 }
-.borde{
-    border-top: solid rgb(216, 114, 19) medium;
-    padding: 0.2vw;
-}
+
 
 /* historia */
 
