@@ -1,0 +1,22 @@
+//mixin
+
+@mixin d-flex {
+    display: flex;
+}
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.borde{
+    border-top: solid rgb(216, 114, 19) medium;
+}
+.bg-grey{
+    background-color: $grey;
+}
+.pie-index{
+    margin-top: auto;
+}

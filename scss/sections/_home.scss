@@ -1,0 +1,79 @@
+// home nesting
+
+.home{
+    @include d-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    @media (min-width: 1200px) {
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        border-top: none;
+    }
+}
+.home__uno{
+    $padd: 2%;
+    padding: $padd;
+    order: 1;
+    @media (min-width: 1200px) {
+        margin: 0% 5%;
+        padding: 1.5% 0%;
+    }
+    & h1{
+        text-align: center;
+        font-size: $txtLg + 0.2rem;
+        font-family: $mainFont;
+        text-transform: capitalize;
+        padding-bottom: $padd / 2;
+        @media (min-width: 768px) {
+            font-size: $txtXl;
+        }
+        @media (min-width: 1200px) {
+            font-size: $txtXxl + 1rem;
+        }
+    }
+    & div.imgxl{
+        text-align: center;
+        width: 90vw;
+        @media (min-width: 1200px) {
+            width: 100vh;
+            padding-top: 0%;
+        }
+    }
+    
+}
+.home__dos{
+    $width: 100vw;
+    @include d-flex;
+    justify-content: start;
+    align-items: center;
+    order: 2;
+    width: $width - 20vw;
+    padding: 6vh 3vh;
+    @media (min-width: 1200px) {
+        flex-direction: column;
+        width: fit-content;
+        position: relative;
+        left: 8vw; top: 18vh;
+    }
+    h3{
+        padding: 5%;
+        font-size: $txtMd + 0.2rem;
+        color: $secondaryColor;
+        @media (min-width: 768px) {
+            font-size: $txtLg;
+        }
+        @media (min-width: 1200px) {
+            font-size: $txtXl;
+        }
+    }
+    img{
+        width: 30vw;
+    }
+}
+.img-m{
+    width: 40vw;
+    @media (min-width: 1200px) {
+        width: 13vw;
+    }
+}

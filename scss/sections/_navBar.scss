@@ -1,0 +1,39 @@
+// nesting
+
+#botonera{
+    align-items: center;
+    background: linear-gradient(to right, black, #131313, #232323); 
+    .container-fluid{
+        padding: 0px 30px 0px 5%;
+    }
+    img{
+        width: 8vw;
+    }
+    ul{
+        @include d-flex;
+            li{
+                padding: 0vw 3vw;
+                list-style: none;
+                a{
+                    color: $mainColor;
+                    font-size: $txtMd;
+                    font-weight: $txtGrues;
+                    font-family: $secondaryFont;
+                    text-decoration: none;
+                    &:hover{
+                        color: $white;
+                    }
+                    @media (min-width: 768px){
+                        font-size: $txtLg;
+                    }
+                    @media (min-width: 1200px){
+                        font-size: $txtXl;
+                    }
+                }
+            }
+    }
+}
+.navbar-brand{
+    margin-left: 5%;
+    margin-right: 0px;
+}

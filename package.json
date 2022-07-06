@@ -1,0 +1,25 @@
+{
+  "name": "nano",
+  "version": "1.0.0",
+  "description": "primera repo de mi web de YSY A - proyecto para curso de coderhouse (desarrollo web)\r este es mi sitio web acerca de YSY A, un artista argentino que fue y es muy importante en la historia de el genero y movimiento urbano en Argentina",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/style.scss css/style.css",
+		"watch-css": "nodemon -e scss -x \"npm     run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IgnacioSardella/YSY-A-Web-.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IgnacioSardella/YSY-A-Web-/issues"
+  },
+  "homepage": "https://github.com/IgnacioSardella/YSY-A-Web-#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.18"
+  }
+}
