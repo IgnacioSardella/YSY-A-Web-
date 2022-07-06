@@ -134,7 +134,7 @@ h1, h2, h3 {
         font-size: 2rem; } }
     @media (min-width: 1200px) {
       .home__dos h3 {
-        font-size: 3rem; } }
+        font-size: 2.4rem; } }
   .home__dos img {
     width: 30vw; }
 

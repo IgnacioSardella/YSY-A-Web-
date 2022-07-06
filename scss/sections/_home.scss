@@ -64,7 +64,7 @@
             font-size: $txtLg;
         }
         @media (min-width: 1200px) {
-            font-size: $txtXl;
+            font-size: $txtLg + 0.4rem;
         }
     }
     img{
