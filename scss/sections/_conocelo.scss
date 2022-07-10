@@ -1,0 +1,182 @@
+.historia{
+    @include d-flex;
+    justify-content: center;
+    flex-flow: row nowrap;
+    @media (min-width: 1200px) {
+        justify-content: flex-end;
+        margin-right: 10%;
+    }
+    & img{
+        width: 50vw;
+        @media (min-width: 1200px) {
+            max-width: 30vw;
+        }
+        @media (min-width: 1650px) {
+            max-width: 25vw;
+        }
+    }
+    & div.historia__textos{
+        padding: 1% 2%;
+        max-width: 40vw;
+        background-color: $brown;
+        @media (min-width: 1200px) {
+            max-width: 30vw;
+        }
+        @media (min-width: 1650px) {
+            max-width: 20vw;
+        }
+    }
+    & h2{
+        font-size: $txtXl - 0.4rem;
+        font-weight: $txtHeav;
+        color: $black;
+        @media (min-width: 768px) {
+            font-size: $txtXl;
+        }
+    }
+    & p{
+        font-size: $txtMd - 0.3rem;
+        font-weight: $txtGrues;
+        color: $white;
+        @media (min-width: 640px) {
+            font-size: $txtMd - 0.2rem;
+        }
+        @media (min-width: 768px) {
+            font-size: $txtMd + 0.2rem ;
+        }
+        @media (min-width: 960px) {
+            font-size: $txtLg;
+        }
+        @media (min-width: 1200px) {
+            font-size: $txtLg - 0.2rem;
+        }
+    }
+}
+.alejo{
+    margin: 40px 15px;
+    @media (min-width: 1200px) {
+        @include d-flex;
+        justify-content: space-evenly;
+        flex-flow: row nowrap;
+        box-sizing: content-box;
+        padding:  2.5% 0;
+    }
+    &__textos{
+        background-color: $grey;
+        @media (min-width: 1200px) {
+            width: 40%;
+        }
+        h3{
+            text-align: center;
+            font-size: $txtLg;
+            padding-top: 5px;
+            @media (min-width: 768px) {
+                font-size: $txtXl - 0.2rem;
+            }
+        }
+        &--pgf{
+            @include d-flex;
+        p{
+            font-size: $txtMd - 0.2rem;
+            color: $black;
+            font-weight: $txtGrues;
+            text-align: justify;
+            padding: 2%;
+            @media (min-width: 1200px) {
+                font-size: $txtMd;
+            }
+        }
+        .justIzq{
+            max-width: 49vw;
+            @media (min-width: 1200px) {
+                max-width: 20vw;
+            }
+        }
+        }
+    }
+    &__imagenes{
+        @include d-flex;
+        justify-content: space-evenly;
+        padding: 2%;
+        @media (min-width: 1200px) {
+            padding: 0;
+            width: 50vw;
+            align-items: center;
+        }
+        &--gde{
+            width: 18vh;
+            @media (min-width: 768px) {
+                width: 25vh;
+            }
+            @media (min-width: 1400px) {
+                width: 30vh;
+            }
+        }
+        &--quinto{
+            width: 25vh;
+            @media (min-width: 768px) {
+                width: 35vh;
+            }
+            @media (min-width: 1400px) {
+                width: 43.5vh;
+            }
+        }
+    }
+}
+.sdios{
+    @include d-flex;
+    justify-content: center;
+    flex-flow: row nowrap;
+    padding-bottom: 5%;
+    @media (min-width: 1200px) {
+        justify-content: flex-start;
+        margin-left: 10%;
+    }
+    &__textos{
+        background-color: $orangeOpc;
+        padding: 0 2%;
+        text-align: end;
+        width: 40vw;
+        @media (min-width: 1200px) {
+            max-width: 30vw;
+        }
+        @media (min-width: 1650px) {
+            max-width: 25vw;
+        }
+        h3{
+            font-size: $txtLg + 0.2rem;
+            padding-top: 5px;
+            @media (min-width: 768px) {
+                font-size: $txtXl - 0.2rem;
+            }
+        }
+        p{
+            font-size: $txtSm * 1.4;
+            font-weight: $txtGrues;
+            @media (min-width: 640px) {
+                font-size: $txtMd - 0.2rem;
+            }
+            @media (min-width: 768px) {
+                font-size: $txtMd;
+            }
+            @media (min-width: 960px) {
+                font-size: $txtLg;
+            }
+            @media (min-width: 1200px) {
+                font-size: $txtLg - 0.2rem;
+            }
+        }
+    }
+    & img{
+        width: 50vw;
+        @media (min-width: 640px) {
+            width: 35vw;
+        }
+        @media (min-width: 1200px) {
+            max-width: 30vw;
+        }
+        @media (min-width: 1650px) {
+            max-width: 20vw;
+        }
+    }
+}

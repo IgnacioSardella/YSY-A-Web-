@@ -2,8 +2,9 @@
 
 @import "general/_variables";
 @import "general/_fonts";
-@import "general/commons";
 @import "_clases";
+@import "general/commons";
 @import "sections/_navBar";
 @import "sections/_home";
+@import "sections/_conocelo.scss";
 @import "sections/_footer";

@@ -3,7 +3,7 @@
 #botonera{
     align-items: center;
     background: linear-gradient(to right, black, #131313, #232323); 
-    .container-fluid{
+    &.container-fluid{
         padding: 0px 30px 0px 5%;
     }
     img{

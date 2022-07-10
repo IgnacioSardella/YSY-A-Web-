@@ -49,7 +49,6 @@
     align-items: center;
     order: 2;
     width: $width - 20vw;
-    padding: 6vh 3vh;
     @media (min-width: 1200px) {
         flex-direction: column;
         width: fit-content;
@@ -75,5 +74,26 @@
     width: 40vw;
     @media (min-width: 1200px) {
         width: 13vw;
+    }
+}
+
+// intro + borde >>next html's
+#intro {
+    $padd: 2%;
+    @include d-flex;
+    justify-content: center;
+    padding: $padd;
+    h1{
+        font-size: $txtXxl;
+        @media (min-width: 1200px) {
+            font-size: $txtXxl + 1.2rem;
+        }
+        
+        &.bordeintro {
+            border-bottom: solid $mainColor 0.4vw;
+            padding: $padd;
+            width: 75%;
+            text-align: center;
+        }
     }
 }
