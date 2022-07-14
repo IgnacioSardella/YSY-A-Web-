@@ -1,12 +1,10 @@
 footer{
-    @include d-flex;
+    @include flexChoose(space-evenly, center);
     flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
     h3{
         font-size: $txtMd;
         margin: 0;
-        color: $secondaryColor;
+        color: map-get($map: $pColores, $key: 'plata');
         @media (min-width: 768px){
             font-size: $txtXl - 0.4rem;
         }

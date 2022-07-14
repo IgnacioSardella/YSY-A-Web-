@@ -1,10 +1,9 @@
 // home nesting
 
 .home{
-    @include d-flex;
+    @include flexChoose(space-between, center);
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    margin-bottom: 30px;
     @media (min-width: 1200px) {
         flex-direction: row-reverse;
         justify-content: space-around;
@@ -18,29 +17,21 @@
     @media (min-width: 1200px) {
         margin: 0% 5%;
         padding: 1.5% 0%;
+        max-width: 50vw;
     }
     & h1{
-        text-align: center;
-        font-size: $txtLg + 0.2rem;
+        @include text($txtLg + 0.2rem, center);
+        color: map-get($map: $pColores, $key: 'white');
         font-family: $mainFont;
         text-transform: capitalize;
         padding-bottom: $padd / 2;
         @media (min-width: 768px) {
             font-size: $txtXl;
         }
-        @media (min-width: 1200px) {
+        @media (min-width: 1650px) {
             font-size: $txtXxl + 1rem;
         }
     }
-    & div.imgxl{
-        text-align: center;
-        width: 90vw;
-        @media (min-width: 1200px) {
-            width: 100vh;
-            padding-top: 0%;
-        }
-    }
-    
 }
 .home__dos{
     $width: 100vw;
@@ -57,13 +48,16 @@
     }
     h3{
         padding: 5%;
-        font-size: $txtMd + 0.2rem;
-        color: $secondaryColor;
+        @include text($txtMd + 0.2rem, center);
+        color: map-get($map: $pColores, $key: 'white');
         @media (min-width: 768px) {
             font-size: $txtLg;
         }
         @media (min-width: 1200px) {
-            font-size: $txtLg + 0.4rem;
+            font-size: $txtLg + 0.2rem;
+        }
+        @media (min-width: 1600px) {
+            font-size: $txtXl;
         }
     }
     img{
@@ -84,13 +78,14 @@
     justify-content: center;
     padding: $padd;
     h1{
-        font-size: $txtXxl;
+        @include text($txtXxl, center);
+        color: map-get($map: $pColores, $key: 'white');
         @media (min-width: 1200px) {
             font-size: $txtXxl + 1.2rem;
         }
         
         &.bordeintro {
-            border-bottom: solid $mainColor 0.4vw;
+            border-bottom: solid map-get($map: $pColores, $key: 'orng') 0.4vw;
             padding: $padd;
             width: 75%;
             text-align: center;

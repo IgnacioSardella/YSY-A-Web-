@@ -1,22 +1,46 @@
-//mixin
+//mixins
 
 @mixin d-flex {
     display: flex;
 }
 
-@mixin flexCenter {
+@mixin flexChoose($justify, $align){
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: $justify;
+    align-items: $align;
 }
 
+@mixin text($fSize, $tAlign) {
+    font-size: $fSize;
+    text-align: $tAlign;
+}
+
+//clases 
 
 .borde{
-    border-top: solid rgb(216, 114, 19) medium;
+    border-top: solid map-get($map: $pColores, $key: 'orng') medium;
 }
 .bg-grey{
-    background-color: $black;
+    background-color: map-get($map: $pColores, $key: 'black');
 }
 .pie-index{
     margin-top: auto;
+}
+
+//extends
+
+.texto-subrayado{
+    text-decoration: underline;
+}
+.subrayado-naranja{
+    @extend .texto-subrayado;
+    text-decoration-color: map-get($map: $pColores, $key: 'orng');
+}
+.subrayado-plata{
+    @extend .texto-subrayado;
+    text-decoration-color: map-get($map: $pColores, $key: 'plata');
+}
+.subrayado-brown{
+    @extend .texto-subrayado;
+    text-decoration-color: map-get($map: $pColores, $key: 'brown');
 }
