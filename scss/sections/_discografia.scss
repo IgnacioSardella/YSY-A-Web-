@@ -1,0 +1,80 @@
+.maindisc{
+    @include d-flex;
+    justify-content: center;
+    flex-direction: column;
+    width: $w-100;
+    div h2{
+        @include flexChoose(center, center);
+        @include text($txtLg + 0.2rem, center);
+        color: map-get($map: $pColores, $key: 'gold');
+        margin-top: 25px;
+        @media (min-width: 576px) {
+            font-size: $txtXl;
+        }
+        @media (min-width: 992px) {
+            font-size: $txtXl + 0.4rem;
+        }
+        @media (min-width: 1650px) {
+            font-size: $txtXxl - 0.4rem;
+        }
+    }
+    &__table{
+        @include flexChoose(center, center);
+        border: none;
+        margin-bottom: 55px;
+        margin: auto 5px;
+        &#table-border tbody, td, th, tfoot, tr{
+            border-color: map-get($map: $pColores, $key: 'black');
+            border-style: solid;
+            border-width: 1px;
+            padding: 6px;
+            .table-th{
+                background-color: map-get($map: $pColores, $key: 'orng');
+                padding: 8px;
+                @include text($txtSm + 0.25rem, center);
+                color: map-get($map: $pColores, $key: 'black');
+                @media (min-width: 992px) {
+                    font-size: $txtMd + 0.2rem;
+                }
+                @media (min-width: 1650px) {
+                    font-size: $txtLg;
+                }
+            }
+            .table-td{
+                @include text($txtSm + 0.235rem, start);
+                color: map-get($map: $pColores, $key: 'white');
+                background-color: map-get($map: $pColores, $key: 'grey');
+                @media (min-width: 992px) {
+                    font-size: $txtMd;
+                }
+                @media (min-width: 1650px) {
+                    font-size: $txtMd * 1.2;
+                }
+            }
+        }
+    }
+}
+.tapas{
+    margin-top: 55px;
+    margin-bottom: 2%;
+    &__texto{
+        display: flex;
+        justify-content: center;
+        h3{
+            @include text($txtLg, center);
+            color: map-get($map: $pColores, $key: 'white');
+            @media (min-width: 576px) {
+                font-size: $txtLg + 0.4rem;
+            }
+            @media (min-width: 992px) {
+                font-size: $txtXl;
+            }
+            @media (min-width: 1650px) {
+                font-size: $txtXl + 0.3rem;
+            }
+        }
+    }
+    div.row div{
+        padding: 3%;
+    }
+}

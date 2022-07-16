@@ -87,7 +87,7 @@
         &.bordeintro {
             border-bottom: solid map-get($map: $pColores, $key: 'orng') 0.4vw;
             padding: $padd;
-            width: 75%;
+            width: $w-75;
             text-align: center;
         }
     }

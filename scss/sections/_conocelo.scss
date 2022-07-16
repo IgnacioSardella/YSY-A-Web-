@@ -1,13 +1,17 @@
 .historia{
     @include d-flex;
     justify-content: center;
-    flex-flow: row nowrap;
-    @media (min-width: 1200px) {
+    flex-flow: column nowrap;
+    margin: auto 5%;
+    @media (min-width: 992px) {
+        flex-direction: row;
         justify-content: flex-end;
         margin-right: 10%;
     }
     & img{
-        width: 53.3vw;
+        @media (min-width: 992px) {
+            max-width: 40vw;
+        }
         @media (min-width: 1200px) {
             max-width: 30vw;
         }
@@ -17,13 +21,13 @@
     }
     & div.historia__textos{
         padding: 1% 2%;
-        max-width: 40vw;
+        
         background-color: map-get($map: $pColores, $key: 'brown');
         @media (min-width: 1200px) {
-            max-width: 30vw;
+            max-width: 40vw;
         }
         @media (min-width: 1650px) {
-            max-width: 20vw;
+            max-width: 25vw;
         }
     }
     & h2{
@@ -64,7 +68,7 @@
     &__textos{
         background-color: map-get($map: $pColores, $key: 'grey');
         @media (min-width: 1200px) {
-            width: 40%;
+            width: $w-50 - 10%;
         }
         h3{
             @include text($txtLg, center);
@@ -98,26 +102,25 @@
         justify-content: space-evenly;
         padding: 2%;
         @media (min-width: 1200px) {
+            flex-direction: column;
+            justify-content: space-around;
             padding: 0;
             width: 50vw;
             align-items: center;
         }
+        @media (min-width: 1300px) {
+            flex-direction: row;
+        }
         &--gde{
-            width: 18vh;
-            @media (min-width: 768px) {
-                width: 25vh;
-            }
-            @media (min-width: 1400px) {
-                width: 30vh;
+            width: 30%;
+            @media (min-width: 1200px) {
+                width: 32%;
             }
         }
         &--quinto{
-            width: 25vh;
-            @media (min-width: 768px) {
-                width: 35vh;
-            }
-            @media (min-width: 1400px) {
-                width: 43.5vh;
+            width: 42%;
+            @media (min-width: 1200px) {
+                width: 45%;
             }
         }
     }
@@ -125,16 +128,20 @@
 .sdios{
     @include d-flex;
     justify-content: center;
-    flex-flow: row nowrap;
+    flex-flow: column-reverse nowrap;
+    margin: auto 5%;
     padding-bottom: 5%;
-    @media (min-width: 1200px) {
+    @media (min-width: 576px) {
+        margin: 0 12.5%;
+    }
+    @media (min-width: 992px) {
+        flex-flow: row nowrap;
         justify-content: flex-start;
         margin-left: 10%;
     }
     &__textos{
         background-color: map-get($map: $pColores, $key: 'orngOpc');
         padding: 0 2%;
-        width: 40vw;
         @media (min-width: 1200px) {
             max-width: 30vw;
         }
@@ -150,7 +157,7 @@
             }
         }
         p{
-            @include text($txtSm * 1.4, end);
+            @include text($txtSm * 1.5, end);
             color: map-get($map: $pColores, $key: 'black');
             font-weight: $txtGrues;
             @media (min-width: 640px) {
@@ -168,9 +175,8 @@
         }
     }
     & img{
-        width: 50vw;
-        @media (min-width: 640px) {
-            width: 35vw;
+        @media (min-width: 992px) {
+            max-width: 30vw;
         }
         @media (min-width: 1200px) {
             max-width: 30vw;
