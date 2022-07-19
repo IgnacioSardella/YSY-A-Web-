@@ -8,6 +8,9 @@
 .pie-index {
   margin-top: auto; }
 
+.disclaimer {
+  display: none; }
+
 .texto-subrayado, .subrayado-naranja, .subrayado-plata, .subrayado-brown {
   text-decoration: underline; }
 
