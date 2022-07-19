@@ -1,0 +1,138 @@
+.mainshop{
+    padding: 0 5%;
+    @media (min-width: 992px){
+        padding: 0;
+    }
+    div h2{
+        @include text($txtLg, center);
+        color: map-get($map: $pColores, $key: 'white');
+        @media (min-width: 576px){
+            font-size: $txtXl - 0.5rem;
+        }
+        @media (min-width: 992px){
+            font-size: $txtXl;
+        }
+        @media (min-width: 1200px){
+            font-size: $txtXl + 0.5rem;
+        }
+        @media (min-width: 1650px){
+            font-size: $txtXxl;
+        }
+    }
+    div h3{
+        @include text($txtLg, center);
+        color: map-get($map: $pColores, $key: 'white');
+        @media (min-width: 576px){
+            font-size: $txtXl - 0.5rem;
+        }
+        @media (min-width: 992px){
+            font-size: $txtLg + 0.4rem;
+        }
+        @media (min-width: 1650px){
+            font-size: $txtXl;
+        }
+    }
+    div.container-fluid{
+        justify-content: center;
+        padding: 2% 6%;
+        div.row div{
+            @include d-flex;
+            figure{
+                padding: 5%;
+                @media (min-width: 992px){
+                    padding: 0;
+                }
+            }
+            figcaption{
+                @include text($txtLg - 0.2rem, center);
+                color: map-get($map: $pColores, $key: 'white');
+                font-weight: $txtGrues;
+                padding-top: 2%;
+                @media (min-width: 1200px){
+                    font-size: $txtLg + 0.2rem;
+                }
+            }
+            p{
+                @include text($txtMd - 0.1rem, center);
+                color: map-get($map: $pColores, $key: 'orng');
+                font-weight: $txtHeav;
+                padding-bottom: 2%;
+                @media (min-width: 1200px){
+                    font-size: $txtLg - 0.2rem;
+                }
+            }
+        }
+    }
+}
+.boxform{
+    @include flexChoose(center, center);
+    padding-bottom: 5%;
+    #pedido{
+        padding: 2%;
+        .box{
+            background-color: rgba(143, 112, 255, 0.7);
+            @media (min-width: 1200px){
+                width: 45vw;
+            }
+            @media (min-width: 1650px){
+                width: 35vw;
+            }
+            &__text h2{
+                @include text($txtLg, center);
+                font-weight: $txtHeav - 100;
+                color: map-get($map: $pColores, $key: 'black');
+                padding-top: 10px;
+                margin: 3px;
+                text-transform: uppercase;
+                text-decoration: underline;
+                @media (min-width: 1200px){
+                    font-size: $txtXl + 0.2rem;
+                }
+            }
+        }
+        form{
+            padding: 10px;
+            fieldset{
+                padding: 10px;
+                margin: 5px;
+                font-size: $txtMd;
+                background-color: map-get($map: $pColores, $key: 'grey');
+                border: none;
+                @media (min-width: 1200px){
+                    font-size: $txtXl - 0.2rem;
+                }
+                legend{
+                    font-weight: $txtHeav - 100;
+                    color: map-get($map: $pColores, $key: 'black');
+                    @media (min-width: 1200px){
+                        font-size: $txtXl;
+                    }
+                }
+                label{
+                    color: map-get($map: $pColores, $key: 'black');
+                    &:hover{
+                        font-weight: $txtGrues;
+                    }
+                    
+                }
+                input{
+                    @media (min-width: 1200px){
+                        font-size: $txtLg + 0.2rem;
+                    }
+                }
+                select{
+                    @media (min-width: 1200px){
+                        font-size: $txtLg + 0.2rem;
+                    }
+                }
+                textarea{
+                    @media (min-width: 1200px){
+                        font-size: $txtLg + 0.2rem;
+                        width: 20em;
+                        height: 8em;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -423,6 +423,236 @@ img {
   .tapas div.row div {
     padding: 3%; }
 
+.mainshop {
+  padding: 0 5%; }
+  @media (min-width: 992px) {
+    .mainshop {
+      padding: 0; } }
+  .mainshop div h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: #e6e6e6; }
+    @media (min-width: 576px) {
+      .mainshop div h2 {
+        font-size: 2.5rem; } }
+    @media (min-width: 992px) {
+      .mainshop div h2 {
+        font-size: 3rem; } }
+    @media (min-width: 1200px) {
+      .mainshop div h2 {
+        font-size: 3.5rem; } }
+    @media (min-width: 1650px) {
+      .mainshop div h2 {
+        font-size: 4rem; } }
+  .mainshop div h3 {
+    font-size: 2rem;
+    text-align: center;
+    color: #e6e6e6; }
+    @media (min-width: 576px) {
+      .mainshop div h3 {
+        font-size: 2.5rem; } }
+    @media (min-width: 992px) {
+      .mainshop div h3 {
+        font-size: 2.4rem; } }
+    @media (min-width: 1650px) {
+      .mainshop div h3 {
+        font-size: 3rem; } }
+  .mainshop div.container-fluid {
+    justify-content: center;
+    padding: 2% 6%; }
+    .mainshop div.container-fluid div.row div {
+      display: flex; }
+      .mainshop div.container-fluid div.row div figure {
+        padding: 5%; }
+        @media (min-width: 992px) {
+          .mainshop div.container-fluid div.row div figure {
+            padding: 0; } }
+      .mainshop div.container-fluid div.row div figcaption {
+        font-size: 1.8rem;
+        text-align: center;
+        color: #e6e6e6;
+        font-weight: 600;
+        padding-top: 2%; }
+        @media (min-width: 1200px) {
+          .mainshop div.container-fluid div.row div figcaption {
+            font-size: 2.2rem; } }
+      .mainshop div.container-fluid div.row div p {
+        font-size: 1.3rem;
+        text-align: center;
+        color: #d87213;
+        font-weight: 800;
+        padding-bottom: 2%; }
+        @media (min-width: 1200px) {
+          .mainshop div.container-fluid div.row div p {
+            font-size: 1.8rem; } }
+
+.boxform {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5%; }
+  .boxform #pedido {
+    padding: 2%; }
+    .boxform #pedido .box {
+      background-color: rgba(143, 112, 255, 0.7); }
+      @media (min-width: 1200px) {
+        .boxform #pedido .box {
+          width: 45vw; } }
+      @media (min-width: 1650px) {
+        .boxform #pedido .box {
+          width: 35vw; } }
+      .boxform #pedido .box__text h2 {
+        font-size: 2rem;
+        text-align: center;
+        font-weight: 700;
+        color: #161616;
+        padding-top: 10px;
+        margin: 3px;
+        text-transform: uppercase;
+        text-decoration: underline; }
+        @media (min-width: 1200px) {
+          .boxform #pedido .box__text h2 {
+            font-size: 3.2rem; } }
+    .boxform #pedido form {
+      padding: 10px; }
+      .boxform #pedido form fieldset {
+        padding: 10px;
+        margin: 5px;
+        font-size: 1.4rem;
+        background-color: #505050;
+        border: none; }
+        @media (min-width: 1200px) {
+          .boxform #pedido form fieldset {
+            font-size: 2.8rem; } }
+        .boxform #pedido form fieldset legend {
+          font-weight: 700;
+          color: #161616; }
+          @media (min-width: 1200px) {
+            .boxform #pedido form fieldset legend {
+              font-size: 3rem; } }
+        .boxform #pedido form fieldset label {
+          color: #161616; }
+          .boxform #pedido form fieldset label:hover {
+            font-weight: 600; }
+        @media (min-width: 1200px) {
+          .boxform #pedido form fieldset input {
+            font-size: 2.2rem; } }
+        @media (min-width: 1200px) {
+          .boxform #pedido form fieldset select {
+            font-size: 2.2rem; } }
+        @media (min-width: 1200px) {
+          .boxform #pedido form fieldset textarea {
+            font-size: 2.2rem;
+            width: 20em;
+            height: 8em; } }
+
+.mainabout {
+  padding: 0; }
+  .mainabout div.column {
+    text-align: end;
+    margin: 5% 10%; }
+    @media (min-width: 992px) {
+      .mainabout div.column {
+        margin: auto 15%; } }
+    @media (min-width: 1650px) {
+      .mainabout div.column {
+        margin: auto 20%; } }
+    .mainabout div.column h2 {
+      font-size: 2rem;
+      color: #e6e6e6;
+      margin: 2.5% auto; }
+      @media (min-width: 768px) {
+        .mainabout div.column h2 {
+          font-size: 2.4rem;
+          text-align: end; } }
+      @media (min-width: 1200px) {
+        .mainabout div.column h2 {
+          font-size: 3rem;
+          text-align: end; } }
+      @media (min-width: 1650px) {
+        .mainabout div.column h2 {
+          font-size: 3.4rem;
+          text-align: end; } }
+    .mainabout div.column div.fechas {
+      background-color: #cfb997; }
+      .mainabout div.column div.fechas div.fecha {
+        margin: 1% 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2%;
+        border-bottom: solid #866e4e; }
+        .mainabout div.column div.fechas div.fecha a {
+          font-weight: 600;
+          padding: 10px 12px;
+          color: #161616;
+          background-color: #c5c5c5;
+          text-decoration: none;
+          border: solid #866e4e 2px; }
+          @media (min-width: 768px) {
+            .mainabout div.column div.fechas div.fecha a {
+              font-size: 1.4rem; } }
+        .mainabout div.column div.fechas div.fecha div.d-flex {
+          width: 40vw; }
+          .mainabout div.column div.fechas div.fecha div.d-flex div.text {
+            width: 25vw;
+            display: flex;
+            flex-direction: column; }
+            @media (min-width: 650px) {
+              .mainabout div.column div.fechas div.fecha div.d-flex div.text {
+                width: 32vw; } }
+            .mainabout div.column div.fechas div.fecha div.d-flex div.text h3, .mainabout div.column div.fechas div.fecha div.d-flex div.text h4 {
+              font-size: 1.2rem;
+              text-align: end;
+              font-weight: 600; }
+              @media (min-width: 768px) {
+                .mainabout div.column div.fechas div.fecha div.d-flex div.text h3, .mainabout div.column div.fechas div.fecha div.d-flex div.text h4 {
+                  font-size: 1.8rem;
+                  text-align: end; } }
+              @media (min-width: 1200px) {
+                .mainabout div.column div.fechas div.fecha div.d-flex div.text h3, .mainabout div.column div.fechas div.fecha div.d-flex div.text h4 {
+                  font-size: 2.2rem;
+                  text-align: end; } }
+          .mainabout div.column div.fechas div.fecha div.d-flex h4 {
+            font-weight: 800; }
+            @media (min-width: 768px) {
+              .mainabout div.column div.fechas div.fecha div.d-flex h4 {
+                font-size: 2rem;
+                text-align: end; } }
+            @media (min-width: 1200px) {
+              .mainabout div.column div.fechas div.fecha div.d-flex h4 {
+                font-size: 3rem;
+                text-align: end; } }
+  .mainabout section {
+    margin: 5% 10.5%; }
+    .mainabout section form#contacto {
+      background-color: #cfb997;
+      padding: 2%; }
+      @media (min-width: 992px) {
+        .mainabout section form#contacto {
+          margin: auto 6%; } }
+      @media (min-width: 1650px) {
+        .mainabout section form#contacto {
+          margin: auto 12%; } }
+      .mainabout section form#contacto span {
+        font-size: 1.3rem;
+        text-align: center;
+        font-weight: 600; }
+        @media (min-width: 768px) {
+          .mainabout section form#contacto span {
+            font-size: 1.8rem; } }
+        @media (min-width: 1200px) {
+          .mainabout section form#contacto span {
+            font-size: 2.4rem; } }
+      @media (min-width: 992px) {
+        .mainabout section form#contacto div.d-flex {
+          font-size: 1.4rem; } }
+      @media (min-width: 992px) {
+        .mainabout section form#contacto div.d-flex {
+          font-size: 1.9rem; } }
+      .mainabout section form#contacto div.d-flex label {
+        font-weight: 600; }
+
 footer {
   display: flex;
   justify-content: space-evenly;

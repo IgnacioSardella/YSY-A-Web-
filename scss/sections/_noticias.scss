@@ -1,0 +1,112 @@
+.mainabout{
+    padding: 0;
+    div.column{
+        text-align: end;
+        margin: 5% 10%;
+        @media (min-width: 992px) {
+            margin: auto 15%;
+        }
+        @media (min-width: 1650px) {
+            margin: auto 20%;
+        }
+        h2{
+            font-size: $txtLg;
+            color: map-get($map: $pColores, $key: 'white');
+            margin: 2.5% auto;
+            @media (min-width: 768px) {
+                @include text($txtLg + 0.4rem, end);
+            }
+            @media (min-width: 1200px) {
+                @include text($txtXl, end);
+            }
+            @media (min-width: 1650px) {
+                @include text($txtXl + 0.4rem, end);
+            }
+        }
+        div.fechas{
+            background-color: map-get($map: $pColores, $key: 'beige');
+            div.fecha{
+                margin: 1% 5%;
+                @include flexChoose(space-between, center);
+                padding: 2%;
+                border-bottom: solid map-get($map: $pColores, $key: 'brown');
+                a{
+                    font-weight: $txtGrues;
+                    padding: 10px 12px;
+                    color: map-get($map: $pColores, $key: 'black');
+                    background-color: map-get($map: $pColores, $key: 'plata');
+                    text-decoration: none;
+                    border: solid map-get($map: $pColores, $key: 'brown') 2px;
+                    @media (min-width: 768px) {
+                        font-size: $txtMd;
+                    }
+                }
+                div.d-flex{
+                    width: 40vw;
+                    div.text{
+                    width: 25vw;
+                    display: flex;
+                    flex-direction: column;
+                    @media (min-width: 650px) {
+                        width: 32vw;
+                    }
+                        h3, h4{
+                            @include text($txtMd - 0.2rem, end);
+                            font-weight: $txtGrues;
+                            @media (min-width: 768px) {
+                                @include text($txtMd + 0.4rem, end);
+                            }
+                            @media (min-width: 1200px) {
+                                @include text($txtLg + 0.2rem, end);
+                            }
+                        }
+                    }
+                    h4{
+                        font-weight: $txtHeav;
+                        @media (min-width: 768px) {
+                            @include text($txtLg, end);
+                        }
+                        @media (min-width: 1200px) {
+                            @include text($txtXl, end);
+                        }
+                    }
+                }
+            }
+        }
+    } 
+    
+    section{
+        margin: 5% 10.5%;
+        form#contacto{
+            background-color: map-get($map: $pColores, $key: 'beige');
+            padding: 2%;
+            @media (min-width: 992px) {
+                margin: auto 6%;
+            }
+            @media (min-width: 1650px) {
+                margin: auto 12%;
+            }
+            span{
+                @include text($txtMd - 0.1rem, center);
+                font-weight: $txtGrues;
+                @media (min-width: 768px) {
+                    font-size: $txtMd + 0.4rem;
+                }
+                @media (min-width: 1200px) {
+                    font-size: $txtLg + 0.4rem;
+                }
+            }
+            div.d-flex{
+                @media (min-width: 992px) {
+                    font-size: $txtMd;
+                }
+                @media (min-width: 992px) {
+                    font-size: $txtMd + 0.5rem;
+                }
+                label{
+                    font-weight: $txtGrues;
+                }
+            }
+        }
+    }
+}
