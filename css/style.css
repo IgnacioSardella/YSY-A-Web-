@@ -255,14 +255,14 @@ img {
         color: #161616;
         font-weight: 600;
         padding: 2%; }
+        @media (max-width: 400px) {
+          .alejo__textos--pgf p {
+            font-size: 0.9rem; } }
         @media (min-width: 1200px) {
           .alejo__textos--pgf p {
             font-size: 1.4rem; } }
       .alejo__textos--pgf .justIzq {
-        max-width: 49vw; }
-        @media (max-width: 400px) and (min-width: 300px) {
-          .alejo__textos--pgf .justIzq {
-            max-width: 60vw; } }
+        max-width: 50vw; }
         @media (min-width: 1200px) {
           .alejo__textos--pgf .justIzq {
             max-width: 20vw; } }

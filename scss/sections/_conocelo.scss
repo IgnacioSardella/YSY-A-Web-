@@ -81,6 +81,9 @@
         &--pgf{
             @include d-flex;
         p{
+            @media (max-width: 400px){
+                font-size: $txtSm + 0.1rem;
+            }
             @include text($txtMd - 0.2rem, justify);
             color: map-get($map: $pColores, $key: 'black');
             font-weight: $txtGrues;
@@ -90,10 +93,7 @@
             }
         }
         .justIzq{
-            @media (max-width: 400px) and (min-width: 300px) {
-                max-width: 60vw;
-            }
-            max-width: 49vw;
+            max-width: 50vw;
             @media (min-width: 1200px) {
                 max-width: 20vw;
             }
