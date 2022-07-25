@@ -261,11 +261,9 @@ img {
         @media (min-width: 1200px) {
           .alejo__textos--pgf p {
             font-size: 1.4rem; } }
-      .alejo__textos--pgf .justIzq {
-        max-width: 50vw; }
-        @media (min-width: 1200px) {
-          .alejo__textos--pgf .justIzq {
-            max-width: 20vw; } }
+      @media (min-width: 1200px) {
+        .alejo__textos--pgf .justIzq {
+          max-width: 20vw; } }
   .alejo__imagenes {
     display: flex;
     justify-content: space-evenly;
