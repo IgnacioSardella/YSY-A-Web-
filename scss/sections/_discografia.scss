@@ -30,9 +30,12 @@
             padding: 6px;
             .table-th{
                 background-color: map-get($map: $pColores, $key: 'orng');
-                padding: 8px;
-                @include text($txtSm + 0.25rem, center);
+                padding: 5px;
+                @include text($txtSm + 0.15rem, center);
                 color: map-get($map: $pColores, $key: 'black');
+                @media (min-width: 400px) {
+                    font-size: $txtSm + 0.25rem;
+                }
                 @media (min-width: 992px) {
                     font-size: $txtMd + 0.2rem;
                 }
@@ -41,9 +44,12 @@
                 }
             }
             .table-td{
-                @include text($txtSm + 0.235rem, start);
+                @include text($txtSm + 0.1rem, start);
                 color: map-get($map: $pColores, $key: 'white');
                 background-color: map-get($map: $pColores, $key: 'grey');
+                @media (min-width: 400px) {
+                    font-size: $txtSm + 0.235rem;
+                }
                 @media (min-width: 992px) {
                     font-size: $txtMd;
                 }

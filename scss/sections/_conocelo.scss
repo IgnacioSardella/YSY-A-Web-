@@ -90,6 +90,9 @@
             }
         }
         .justIzq{
+            @media (max-width: 400px) and (min-width: 300px) {
+                max-width: 60vw;
+            }
             max-width: 49vw;
             @media (min-width: 1200px) {
                 max-width: 20vw;

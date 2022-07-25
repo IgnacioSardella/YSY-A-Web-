@@ -260,6 +260,9 @@ img {
             font-size: 1.4rem; } }
       .alejo__textos--pgf .justIzq {
         max-width: 49vw; }
+        @media (max-width: 400px) and (min-width: 300px) {
+          .alejo__textos--pgf .justIzq {
+            max-width: 60vw; } }
         @media (min-width: 1200px) {
           .alejo__textos--pgf .justIzq {
             max-width: 20vw; } }
@@ -382,10 +385,13 @@ img {
       padding: 6px; }
       .maindisc__table#table-border tbody .table-th, .maindisc__table td .table-th, .maindisc__table th .table-th, .maindisc__table tfoot .table-th, .maindisc__table tr .table-th {
         background-color: #d87213;
-        padding: 8px;
-        font-size: 1.05rem;
+        padding: 5px;
+        font-size: 0.95rem;
         text-align: center;
         color: #161616; }
+        @media (min-width: 400px) {
+          .maindisc__table#table-border tbody .table-th, .maindisc__table td .table-th, .maindisc__table th .table-th, .maindisc__table tfoot .table-th, .maindisc__table tr .table-th {
+            font-size: 1.05rem; } }
         @media (min-width: 992px) {
           .maindisc__table#table-border tbody .table-th, .maindisc__table td .table-th, .maindisc__table th .table-th, .maindisc__table tfoot .table-th, .maindisc__table tr .table-th {
             font-size: 1.6rem; } }
@@ -393,10 +399,13 @@ img {
           .maindisc__table#table-border tbody .table-th, .maindisc__table td .table-th, .maindisc__table th .table-th, .maindisc__table tfoot .table-th, .maindisc__table tr .table-th {
             font-size: 2rem; } }
       .maindisc__table#table-border tbody .table-td, .maindisc__table td .table-td, .maindisc__table th .table-td, .maindisc__table tfoot .table-td, .maindisc__table tr .table-td {
-        font-size: 1.035rem;
+        font-size: 0.9rem;
         text-align: start;
         color: #e6e6e6;
         background-color: #505050; }
+        @media (min-width: 400px) {
+          .maindisc__table#table-border tbody .table-td, .maindisc__table td .table-td, .maindisc__table th .table-td, .maindisc__table tfoot .table-td, .maindisc__table tr .table-td {
+            font-size: 1.035rem; } }
         @media (min-width: 992px) {
           .maindisc__table#table-border tbody .table-td, .maindisc__table td .table-td, .maindisc__table th .table-td, .maindisc__table tfoot .table-td, .maindisc__table tr .table-td {
             font-size: 1.4rem; } }
