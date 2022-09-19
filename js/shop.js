@@ -111,7 +111,7 @@ listaDeProductos.push(new Producto("Hecho a mano", 3200));
 listaDeProductos.push(new Producto("Mordiendo el bozal", 2900));
 listaDeProductos.push(new Producto("Trap de verdad", 4000));
 listaDeProductos.push(new Producto("Remera SponsorDios", 2700))
-listaDeProductos.push(new Producto("Comic -Genesis de un movimiento-", 2500))
+listaDeProductos.push(new Producto("Comic Genesis de un movimiento", 2500))
 
 
 alert("No te quedes sin tu disco favorito de YSY A")
@@ -123,27 +123,8 @@ function elegirProductos() {
     // 2. ${listaDeProductos[1].nombre} - $${listaDeProductos[1].precio} 
     // 3. ${listaDeProductos[2].nombre} - $${listaDeProductos[2].precio} 
     // 4. ${listaDeProductos[3].nombre} - $${listaDeProductos[3].precio}`));
-    while (producto > 0 && producto < 6) {
-        switch (producto) {
-            case 1:
-                precioTotal += listaDeProductos[0].precio
-                break;
-                
-            case 2:
-                precioTotal += listaDeProductos[1].precio
-                break;
-
-            case 3:
-                precioTotal += listaDeProductos[2].precio
-                break;
-
-            case 4:
-                precioTotal += listaDeProductos[3].precio
-                break;
-
-            default:
-                break;
-        }
+    while (producto > 0 && producto < 5) {
+        precioTotal += listaDeProductos[producto - 1].precio;
         producto = Number(prompt(`Ingrese un numero de los que esten a continuacion para el producto que desea agregar al carrito 
     // 1. ${listaDeProductos[0].nombre} - $${listaDeProductos[0].precio} 
     // 2. ${listaDeProductos[1].nombre} - $${listaDeProductos[1].precio} 
@@ -157,7 +138,7 @@ function elegirAdicional() {
     // 1. ${listaDeProductos[4].nombre} - $${listaDeProductos[4].precio} 
     // 2. ${listaDeProductos[5].nombre} - $${listaDeProductos[5].precio}`));
     while (producto >= 1 && producto <= 2) {
-        precioTotal += listaDeProductos[producto].precio
+        precioTotal += listaDeProductos[producto + 3].precio
         producto = Number(prompt(`Ingrese un numero de los que esten a continuacion para agregarlo a su carrito
         // 1. ${listaDeProductos[4].nombre} - $${listaDeProductos[4].precio} 
         // 2. ${listaDeProductos[5].nombre} - $${listaDeProductos[5].precio}`));
