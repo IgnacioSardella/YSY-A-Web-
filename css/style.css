@@ -471,30 +471,36 @@ img {
     justify-content: center;
     padding: 2% 6%; }
     .mainshop div.container-fluid div.row div {
-      display: flex; }
-      .mainshop div.container-fluid div.row div figure {
-        padding: 5%; }
-        @media (min-width: 992px) {
-          .mainshop div.container-fluid div.row div figure {
-            padding: 0; } }
-      .mainshop div.container-fluid div.row div figcaption {
-        font-size: 1.8rem;
-        text-align: center;
-        color: #e6e6e6;
-        font-weight: 600;
-        padding-top: 2%; }
-        @media (min-width: 1200px) {
-          .mainshop div.container-fluid div.row div figcaption {
-            font-size: 2.2rem; } }
-      .mainshop div.container-fluid div.row div p {
-        font-size: 1.3rem;
-        text-align: center;
-        color: #d87213;
-        font-weight: 800;
-        padding-bottom: 2%; }
-        @media (min-width: 1200px) {
-          .mainshop div.container-fluid div.row div p {
-            font-size: 1.8rem; } }
+      background-color: black;
+      border: 1px #a3a3a3 solid;
+      padding: 0; }
+      .mainshop div.container-fluid div.row div .img-shop {
+        padding: 1rem;
+        max-height: 45vh; }
+      .mainshop div.container-fluid div.row div .card-body {
+        border: none;
+        flex-direction: column; }
+        .mainshop div.container-fluid div.row div .card-body h5 {
+          font-size: 1.8rem;
+          text-align: center;
+          color: #e6e6e6;
+          font-weight: 600;
+          padding-top: 2%; }
+          @media (min-width: 1200px) {
+            .mainshop div.container-fluid div.row div .card-body h5 {
+              font-size: 2.2rem; } }
+        .mainshop div.container-fluid div.row div .card-body p {
+          font-size: 1.3rem;
+          text-align: center;
+          color: #d87213;
+          font-weight: 800;
+          padding-bottom: 2%; }
+          @media (min-width: 1200px) {
+            .mainshop div.container-fluid div.row div .card-body p {
+              font-size: 1.8rem; } }
+        .mainshop div.container-fluid div.row div .card-body button {
+          font-size: 1.8rem;
+          margin: 0 2rem 10px 2rem; }
 
 .boxform {
   display: flex;

@@ -36,29 +36,38 @@
         justify-content: center;
         padding: 2% 6%;
         div.row div{
-            @include d-flex;
-            figure{
-                padding: 5%;
-                @media (min-width: 992px){
-                    padding: 0;
-                }
+            background-color: rgb(0, 0, 0);
+            border: 1px rgb(163, 163, 163) solid;
+            padding: 0;
+            .img-shop{
+                padding: 1rem;
+                max-height: 45vh;
             }
-            figcaption{
-                @include text($txtLg - 0.2rem, center);
-                color: map-get($map: $pColores, $key: 'white');
-                font-weight: $txtGrues;
-                padding-top: 2%;
-                @media (min-width: 1200px){
-                    font-size: $txtLg + 0.2rem;
+            .card-body{
+                border: none;
+                flex-direction: column;
+                h5{
+                    @include text($txtLg - 0.2rem, center);
+                    color: map-get($map: $pColores, $key: 'white');
+                    font-weight: $txtGrues;
+                    padding-top: 2%;
+                    @media (min-width: 1200px){
+                        font-size: $txtLg + 0.2rem;
+                    }
                 }
-            }
-            p{
-                @include text($txtMd - 0.1rem, center);
-                color: map-get($map: $pColores, $key: 'orng');
-                font-weight: $txtHeav;
-                padding-bottom: 2%;
-                @media (min-width: 1200px){
-                    font-size: $txtLg - 0.2rem;
+                p{
+                    @include text($txtMd - 0.1rem, center);
+                    color: map-get($map: $pColores, $key: 'orng');
+                    font-weight: $txtHeav;
+                    padding-bottom: 2%;
+                    @media (min-width: 1200px){
+                        font-size: $txtLg - 0.2rem;
+                    }
+                }
+                button{
+                    font-size: 1.8rem;
+                    margin: 0 2rem 10px 2rem;
+                    
                 }
             }
         }
