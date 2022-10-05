@@ -1,9 +1,3 @@
-
-let producto = 0;
-let precioTotal = 0;
-let precioEnCuotas = 0;
-let contador = 0;
-
 let discos = [];
 let adicionales = [];
 let carrito = [];
@@ -29,6 +23,9 @@ adicionales.push(
 );
 
 const cardContainer = document.getElementById("mainShop");
+const verCarrito = document.getElementById("ver-carrito");
+const modalContainer = document.getElementById("modal-container")
+const carritoContainer = document.getElementById('carritoContainer');
 
 function crearCard(product) {
   let btnComprar = document.createElement("button");
@@ -58,6 +55,18 @@ function crearCard(product) {
   return card;
 }
 
+function cargarCards() {
+  cardContainer.innerHTML = "";
+  discos.forEach((product) => {
+    let productoCompleto = crearCard(product);
+    cardContainer.append(productoCompleto);
+  });
+}
+
+cargarCards();
+
+
+
 const comprarProducto = (product) => {
   let productoExiste = carrito.find(item => item.id === product.id)
   if(productoExiste != undefined){
@@ -68,21 +77,66 @@ const comprarProducto = (product) => {
       id: product.id,
       nombre: product.nombre,
       precio: product.precio,
-      imagen: product.imagen,
+      img: product.img,
       cantidad: 1
     })
   }
-  console.log(carrito);
+  
 }
 
+verCarrito.addEventListener('click', () => {
+  modalContainer.style.display = "flex"
+  modalContainer.innerHTML = '';
+  const modalHeader = document.createElement("div");
+  modalHeader.className = "modal-header";
+  modalHeader.innerHTML = `
+  <h3>Tu Carrito</h3>
+  `;
+  modalContainer.append(modalHeader);
 
+  const modalButton = document.createElement("button");
+  modalButton.className = "modal-header-button btn btn-active";
+  modalButton.innerHTML = "<p>Cerrar</p>";
 
-function cargarCards() {
-  cardContainer.innerHTML = "";
-  discos.forEach((product) => {
-    let productoCompleto = crearCard(product);
-    cardContainer.append(productoCompleto);
-  });
+  renderCarrito()
+
+  modalButton.addEventListener('click', () => {
+    modalContainer.style.display = "none"
+  })
+  modalHeader.append(modalButton);
+
+  const total = carrito.reduce((acc, su) => acc + su.precio, 0);
+  const totalCompra = document.createElement("div");
+  totalCompra.className = "total-content";
+  totalCompra.innerHTML = `<p>Total a pagar: $${total}</p>`;
+  modalContainer.append(totalCompra);
+  añadirLocalStorage()
+})
+
+function renderCarrito(){
+  carrito.forEach((producto) => {
+    const itemCarrito = document.createElement("div")
+    itemCarrito.classList = "modal-content"
+    itemCarrito.innerHTML = `
+    <img src="${producto.img}">
+    <p>${producto.nombre}</p>
+    <p>Precio: $${producto.precio}</p>
+    <p>Cantidad: ${producto.cantidad}</p>
+    <button onclick="eliminarProducto(${producto.id})" class="botonEliminar btn btn-active">❌</button>
+    `
+    modalContainer.append(itemCarrito)
+    })
 }
 
-cargarCards();
+function añadirLocalStorage(){
+  localStorage.setItem("carrito", JSON.stringify(carrito))
+}
+
+window.onload = function(){
+  const storage = JSON.parse(localStorage.getItem("carrito"));
+  if (storage) {
+    carrito = storage;
+    renderCarrito()
+  }
+}
+

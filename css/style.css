@@ -502,65 +502,72 @@ img {
           font-size: 1.8rem;
           margin: 0 2rem 10px 2rem; }
 
-.boxform {
+.ver-carrito {
+  font-size: 4rem;
+  background-color: #198754;
+  position: fixed;
+  right: 5%;
+  bottom: 75%; }
+
+.modal-container {
+  width: 80%;
+  margin: 0 10%;
+  max-height: 88vh;
+  color: #fff;
+  background-color: #121212;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  padding-bottom: 5%; }
-  .boxform #pedido {
-    padding: 2%; }
-    .boxform #pedido .box {
-      background-color: rgba(143, 112, 255, 0.7); }
-      @media (min-width: 1200px) {
-        .boxform #pedido .box {
-          width: 45vw; } }
-      @media (min-width: 1650px) {
-        .boxform #pedido .box {
-          width: 35vw; } }
-      .boxform #pedido .box__text h2 {
-        font-size: 2rem;
-        text-align: center;
-        font-weight: 700;
-        color: #161616;
-        padding-top: 10px;
-        margin: 3px;
-        text-transform: uppercase;
-        text-decoration: underline; }
-        @media (min-width: 1200px) {
-          .boxform #pedido .box__text h2 {
-            font-size: 3.2rem; } }
-    .boxform #pedido form {
-      padding: 10px; }
-      .boxform #pedido form fieldset {
-        padding: 10px;
-        margin: 5px;
-        font-size: 1.4rem;
-        background-color: #505050;
-        border: none; }
-        @media (min-width: 1200px) {
-          .boxform #pedido form fieldset {
-            font-size: 2.8rem; } }
-        .boxform #pedido form fieldset legend {
-          font-weight: 700;
-          color: #161616; }
-          @media (min-width: 1200px) {
-            .boxform #pedido form fieldset legend {
-              font-size: 3rem; } }
-        .boxform #pedido form fieldset label {
-          color: #161616; }
-          .boxform #pedido form fieldset label:hover {
-            font-weight: 600; }
-        @media (min-width: 1200px) {
-          .boxform #pedido form fieldset input {
-            font-size: 2.2rem; } }
-        @media (min-width: 1200px) {
-          .boxform #pedido form fieldset select {
-            font-size: 2.2rem; } }
-        @media (min-width: 1200px) {
-          .boxform #pedido form fieldset textarea {
-            font-size: 2.2rem;
-            width: 20em;
-            height: 8em; } }
+  position: fixed;
+  overflow: auto;
+  z-index: 9;
+  top: 12vh;
+  scrollbar-color: none; }
+  .modal-container .modal-header {
+    display: flex;
+    justify-content: space-around;
+    background-color: #0a0909;
+    border: none;
+    color: #fff;
+    width: 100%; }
+    .modal-container .modal-header h3 {
+      font-size: 2.2rem;
+      justify-self: start; }
+    .modal-container .modal-header button {
+      font-size: 1.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      color: #ffa43c; }
+      .modal-container .modal-header button p {
+        margin-bottom: 0; }
+  .modal-container .modal-content {
+    background-color: #121212;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-self: center;
+    width: 80%;
+    margin: 10px; }
+    .modal-container .modal-content img {
+      height: 150px;
+      width: 150px; }
+    .modal-container .modal-content p {
+      font-size: 1.75rem; }
+  .modal-container .total-content {
+    font-size: 2.4rem;
+    padding: 15px;
+    text-align: center;
+    padding-top: 15px; }
+
+.modal-container::-webkit-scrollbar {
+  display: none; }
+
+.toast {
+  background-color: white;
+  position: sticky;
+  bottom: 20px; }
 
 .mainabout {
   padding: 0; }
