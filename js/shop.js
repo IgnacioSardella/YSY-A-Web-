@@ -81,37 +81,97 @@ const comprarProducto = (product) => {
       cantidad: 1
     })
   }
-  
+  añadirLocalStorage()
 }
 
-verCarrito.addEventListener('click', () => {
-  modalContainer.style.display = "flex"
-  modalContainer.innerHTML = '';
-  const modalHeader = document.createElement("div");
-  modalHeader.className = "modal-header";
-  modalHeader.innerHTML = `
-  <h3>Tu Carrito</h3>
-  `;
-  modalContainer.append(modalHeader);
+verCarrito.addEventListener('click', pintarCarrito)
+function pintarCarrito() {
+    modalContainer.style.display = "flex"
+    modalContainer.innerHTML = '';
+    const modalHeader = document.createElement("div");
+    modalHeader.className = "modal-header";
+    modalHeader.innerHTML = `
+    <h3>Tu Carrito</h3>
+    `;
+    modalContainer.append(modalHeader);
 
-  const modalButton = document.createElement("button");
-  modalButton.className = "modal-header-button btn btn-active";
-  modalButton.innerHTML = "<p>Cerrar</p>";
+    const modalButtonHeader = document.createElement("button");
+    modalButtonHeader.className = "modal-header-button btn btn-active";
+    modalButtonHeader.innerHTML = "<p>Cerrar</p>";
 
-  renderCarrito()
+    modalButtonHeader.addEventListener('click', () => {
+      modalContainer.style.display = "none"
+    })
+    modalHeader.append(modalButtonHeader);
 
-  modalButton.addEventListener('click', () => {
-    modalContainer.style.display = "none"
-  })
-  modalHeader.append(modalButton);
+    const total = carrito.reduce((acc, su) => acc + su.precio, 0);
+    const modalFooter = document.createElement("div");
+    modalFooter.className = "modal-footer w-100 justify-content-around";
+    modalFooter.innerHTML = `<p>Total a pagar: $${total}</p>`;
+    modalContainer.append(modalFooter);
 
-  const total = carrito.reduce((acc, su) => acc + su.precio, 0);
-  const totalCompra = document.createElement("div");
-  totalCompra.className = "total-content";
-  totalCompra.innerHTML = `<p>Total a pagar: $${total}</p>`;
-  modalContainer.append(totalCompra);
-  añadirLocalStorage()
-})
+    const buttonFinCompra = document.createElement("div");
+    buttonFinCompra.className = "boton-finalizar-compra";
+    buttonFinCompra.innerHTML = `<button class="btn">Finaliza tu compra!</button>`;
+    buttonFinCompra.addEventListener('click', () => {
+      if (carrito.length >= 1){
+        Swal.fire({
+          title: 'Muchas gracias por confiar en nosotros!',
+          showClass: {
+            popup: 'animate__animated animate__fadeInDown'
+          },
+          hideClass: {
+            popup: 'animate__animated animate__fadeOutUp'
+          }
+        })
+        localStorage.clear()
+        carrito = [];
+        modalContainer.innerHTML = '';
+      }else{
+        Swal.fire({
+          title: 'Su carrito esta vacio, continue comprando',
+          showClass: {
+            popup: 'animate__animated animate__fadeInDown'
+          },
+          hideClass: {
+            popup: 'animate__animated animate__fadeOutUp'
+          }
+        })
+      }
+    });
+    modalFooter.append(buttonFinCompra);
+
+    const buttonVaciarCarrito = document.createElement("div");
+    buttonVaciarCarrito.className = "boton-vaciar-carrito";
+    buttonVaciarCarrito.innerHTML = `<button class="btn">Vaciar carrito</button>`
+    buttonVaciarCarrito.addEventListener('click', () => {
+      Swal.fire({
+        title: 'Esta seguro que desea vaciar su carrito?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        cancelButtonText: 'No',
+        confirmButtonText: 'Si'
+      }).then((result) => {
+        if (result.isConfirmed) {
+            localStorage.clear()
+            carrito = [];
+            modalContainer.innerHTML = '';
+          Swal.fire(
+            'Vacio!',
+            'Tu carrito ahora esta vacio!',
+            'success'
+          )
+        }
+      })
+    })
+
+    
+    modalFooter.append(buttonVaciarCarrito);
+    renderCarrito()
+    modalContainer.append(modalFooter);
+}
 
 function renderCarrito(){
   carrito.forEach((producto) => {
@@ -122,10 +182,20 @@ function renderCarrito(){
     <p>${producto.nombre}</p>
     <p>Precio: $${producto.precio}</p>
     <p>Cantidad: ${producto.cantidad}</p>
-    <button onclick="eliminarProducto(${producto.id})" class="botonEliminar btn btn-active">❌</button>
+    <button onclick="eliminarProducto()" class="botonEliminar btn btn-active">❌</button>
     `
+    
     modalContainer.append(itemCarrito)
     })
+}
+
+const  eliminarProducto = () =>  {
+  const foundId = carrito.find((producto) => producto.id);
+  carrito = carrito.filter((carritoFiltrado) => {
+    return carritoFiltrado !== foundId;
+  })
+  localStorage.removeItem(foundId);
+  pintarCarrito();
 }
 
 function añadirLocalStorage(){
@@ -136,7 +206,6 @@ window.onload = function(){
   const storage = JSON.parse(localStorage.getItem("carrito"));
   if (storage) {
     carrito = storage;
-    renderCarrito()
   }
 }
 

@@ -94,7 +94,7 @@
     position: fixed;
     overflow: auto;
     z-index: 9;
-    top: 12vh;
+    top: 14vh;
     scrollbar-color: none;
     .modal-header{
         display: flex;
@@ -108,25 +108,25 @@
             justify-self: start;
         }
         button{
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: $txtGrues;
             cursor: pointer;
-            color: rgb(255, 164, 60);
+            color: map-get($map: $pColores, $key: 'orng');
             p{
                 margin-bottom: 0;
             }
         }
     }
     .modal-content {
-    background-color: #121212;
-    border: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    align-self: center;
-    width: 80%;
-    margin: 10px;
+        background-color: #121212;
+        border: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        align-self: center;
+        width: 80%;
+        margin: 10px;
     img{
         height: 150px;
         width: 150px;
@@ -136,11 +136,19 @@
     }
     
     }
-    .total-content{
-        font-size: 2.4rem;
-        padding: 15px;
-        text-align: center;
-        padding-top: 15px; 
+    .modal-footer{
+        p{
+            font-size: 2.4rem;
+            padding: 15px;
+            text-align: center;
+            padding-top: 15px; 
+        }
+        button{
+            font-size: 2rem;
+            color: #fff;
+            border: 1px solid #fff;
+            background-color: map-get($map: $pColores, $key: 'grey');
+        }
     }
 }
 .modal-container::-webkit-scrollbar{
