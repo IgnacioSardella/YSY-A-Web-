@@ -194,7 +194,7 @@ const  eliminarProducto = () =>  {
   carrito = carrito.filter((carritoFiltrado) => {
     return carritoFiltrado !== foundId;
   })
-  localStorage.removeItem(foundId);
+  añadirLocalStorage();
   pintarCarrito();
 }
 
