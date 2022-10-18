@@ -574,6 +574,9 @@ img {
   position: sticky;
   bottom: 20px; }
 
+.swal-fin-compra {
+  width: 40em; }
+
 .mainabout {
   padding: 0; }
   .mainabout div.column {

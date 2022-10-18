@@ -1,32 +1,33 @@
-let discos = [];
-let adicionales = [];
+// let discos = [];
+// let adicionales = [];
 let carrito = [];
 
-class Producto {
-  constructor(id, nombre, precio, img) {
-    this.id = id;
-    this.nombre = nombre;
-    this.precio = precio;
-    this.img = img;
-  }
-}
+// class Producto {
+//   constructor(id, nombre, precio, img) {
+//     this.id = id;
+//     this.nombre = nombre;
+//     this.precio = precio;
+//     this.img = img;
+//   }
+// }
 
-discos.push(new Producto(1, "Antezana 247", 3200, "../img/antezana.jpg"));
-discos.push(new Producto(2, "Hecho a mano", 3200, "../img/hechoamano.jpg"));
-discos.push(new Producto(3, "Mordiendo el bozal", 2900, "../img/melbozal.jpg"));
-discos.push(new Producto(4, "Trap de verdad", 4000, "../img/trapdeverdad.jpg"));
-adicionales.push(
-  new Producto(5, "Remera SponsorDios", 2700, "../img/remeraysy.jpg")
-);
-adicionales.push(
-  new Producto(6, "Comic Genesis de un movimiento", 2500, "../img/ysycomic.jpg")
-);
+// discos.push(new Producto(1, "Antezana 247", 3200, "../img/antezana.jpg"));
+// discos.push(new Producto(2, "Hecho a mano", 3200, "../img/hechoamano.jpg"));
+// discos.push(new Producto(3, "Mordiendo el bozal", 2900, "../img/melbozal.jpg"));
+// discos.push(new Producto(4, "Trap de verdad", 4000, "../img/trapdeverdad.jpg"));
+// adicionales.push(
+//   new Producto(5, "Remera SponsorDios", 2700, "../img/remeraysy.jpg")
+// );
+// adicionales.push(
+//   new Producto(6, "Comic Genesis de un movimiento", 2500, "../img/ysycomic.jpg")
+// );
 
 const cardContainer = document.getElementById("mainShop");
 const verCarrito = document.getElementById("ver-carrito");
 const modalContainer = document.getElementById("modal-container")
 const carritoContainer = document.getElementById('carritoContainer');
 
+// funcion creadora de productos en DOM
 function crearCard(product) {
   let btnComprar = document.createElement("button");
   btnComprar.className = "btn btn-success";
@@ -55,18 +56,22 @@ function crearCard(product) {
   return card;
 }
 
-function cargarCards() {
-  cardContainer.innerHTML = "";
-  discos.forEach((product) => {
-    let productoCompleto = crearCard(product);
+// consulta a la "api" y carga de cards
+const pedirDiscos = async () => {
+  try{
+    const resp = await fetch("../js/discos.json");
+    const data = await resp.json();
+    data.forEach(element => {
+      let productoCompleto = crearCard(element);
     cardContainer.append(productoCompleto);
-  });
+    });
+  }catch{
+    console.log("Error");
+  }
 }
+pedirDiscos()
 
-cargarCards();
-
-
-
+// evento del boton comprar
 const comprarProducto = (product) => {
   let productoExiste = carrito.find(item => item.id === product.id)
   if(productoExiste != undefined){
@@ -84,6 +89,7 @@ const comprarProducto = (product) => {
   añadirLocalStorage()
 }
 
+// creacion del evento que pinta el carrito en el html
 verCarrito.addEventListener('click', pintarCarrito)
 function pintarCarrito() {
     modalContainer.style.display = "flex"
@@ -116,7 +122,9 @@ function pintarCarrito() {
     buttonFinCompra.addEventListener('click', () => {
       if (carrito.length >= 1){
         Swal.fire({
-          title: 'Muchas gracias por confiar en nosotros!',
+          title: `Muchas gracias por confiar en nosotros!
+          El precio total de su compra es de ${total} pesos`,
+          className: "swal-fin-compra",
           showClass: {
             popup: 'animate__animated animate__fadeInDown'
           },
@@ -130,6 +138,7 @@ function pintarCarrito() {
       }else{
         Swal.fire({
           title: 'Su carrito esta vacio, continue comprando',
+          className: "swal-fin-compra",
           showClass: {
             popup: 'animate__animated animate__fadeInDown'
           },
@@ -166,8 +175,6 @@ function pintarCarrito() {
         }
       })
     })
-
-    
     modalFooter.append(buttonVaciarCarrito);
     renderCarrito()
     modalContainer.append(modalFooter);

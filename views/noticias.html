@@ -37,10 +37,12 @@
         </div>
         </div>
     </nav>
+    <div class="d-flex align-self-end"><button class="ver-carrito btn btn-active m-auto ml-5" id="ver-carrito">🛒</button></div>
     <div id="intro">
         <h1 class="text-h1 bordeintro">Noticias</h1>
     </div>
     <main class="mainabout">
+        <div class="modal-container" id="modal-container"></div>
         <div class="container-fluid">
             <div class="column">
                 <h2>Proximos shows</h2>
@@ -140,6 +142,8 @@
         </a>
         </div>
     </footer>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/shop.js"></script>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>

@@ -1,0 +1,6 @@
+[
+    {"id": 1, "nombre": "Antezana 247", "precio": 3200, "img": "../img/antezana.jpg"},
+    {"id": 2, "nombre": "Hecho a mano", "precio": 3200, "img": "../img/hechoamano.jpg"},
+    {"id": 3, "nombre": "Mordiendo el bozal", "precio": 2900, "img": "../img/melbozal.jpg"},
+    {"id": 4, "nombre": "Trap de verdad", "precio": 4000, "img": "../img/trapdeverdad.jpg"}
+]
