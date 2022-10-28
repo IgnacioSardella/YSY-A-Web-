@@ -1,26 +1,4 @@
-// let discos = [];
-// let adicionales = [];
 let carrito = [];
-
-// class Producto {
-//   constructor(id, nombre, precio, img) {
-//     this.id = id;
-//     this.nombre = nombre;
-//     this.precio = precio;
-//     this.img = img;
-//   }
-// }
-
-// discos.push(new Producto(1, "Antezana 247", 3200, "../img/antezana.jpg"));
-// discos.push(new Producto(2, "Hecho a mano", 3200, "../img/hechoamano.jpg"));
-// discos.push(new Producto(3, "Mordiendo el bozal", 2900, "../img/melbozal.jpg"));
-// discos.push(new Producto(4, "Trap de verdad", 4000, "../img/trapdeverdad.jpg"));
-// adicionales.push(
-//   new Producto(5, "Remera SponsorDios", 2700, "../img/remeraysy.jpg")
-// );
-// adicionales.push(
-//   new Producto(6, "Comic Genesis de un movimiento", 2500, "../img/ysycomic.jpg")
-// );
 
 const cardContainer = document.getElementById("mainShop");
 const verCarrito = document.getElementById("ver-carrito");
