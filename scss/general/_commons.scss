@@ -27,6 +27,13 @@ img{
     background-size: cover;
     max-height: 100vh;
 }
+.bg-img-shop{
+    background-image: url(../img/fondoysy.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 85vh;
+}
 .bodyscroll{
     overflow-x: hidden;
     overflow-y: auto;

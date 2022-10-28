@@ -75,9 +75,9 @@
         }
     } 
     
-    section{
+    div.form{
         margin: 5% 10.5%;
-        form#contacto{
+        form#form{
             background-color: map-get($map: $pColores, $key: 'beige');
             padding: 2%;
             @media (min-width: 992px) {
@@ -105,6 +105,9 @@
                 }
                 label{
                     font-weight: $txtGrues;
+                }
+                input{
+                    font-size: 1.6rem;
                 }
             }
         }

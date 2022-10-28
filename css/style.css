@@ -48,6 +48,13 @@ img {
   background-size: cover;
   max-height: 100vh; }
 
+.bg-img-shop {
+  background-image: url(../img/fondoysy.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 85vh; }
+
 .bodyscroll {
   overflow-x: hidden;
   overflow-y: auto;
@@ -654,35 +661,37 @@ img {
               .mainabout div.column div.fechas div.fecha div.d-flex h4 {
                 font-size: 3rem;
                 text-align: end; } }
-  .mainabout section {
+  .mainabout div.form {
     margin: 5% 10.5%; }
-    .mainabout section form#contacto {
+    .mainabout div.form form#form {
       background-color: #cfb997;
       padding: 2%; }
       @media (min-width: 992px) {
-        .mainabout section form#contacto {
+        .mainabout div.form form#form {
           margin: auto 6%; } }
       @media (min-width: 1650px) {
-        .mainabout section form#contacto {
+        .mainabout div.form form#form {
           margin: auto 12%; } }
-      .mainabout section form#contacto span {
+      .mainabout div.form form#form span {
         font-size: 1.3rem;
         text-align: center;
         font-weight: 600; }
         @media (min-width: 768px) {
-          .mainabout section form#contacto span {
+          .mainabout div.form form#form span {
             font-size: 1.8rem; } }
         @media (min-width: 1200px) {
-          .mainabout section form#contacto span {
+          .mainabout div.form form#form span {
             font-size: 2.4rem; } }
       @media (min-width: 992px) {
-        .mainabout section form#contacto div.d-flex {
+        .mainabout div.form form#form div.d-flex {
           font-size: 1.4rem; } }
       @media (min-width: 992px) {
-        .mainabout section form#contacto div.d-flex {
+        .mainabout div.form form#form div.d-flex {
           font-size: 1.9rem; } }
-      .mainabout section form#contacto div.d-flex label {
+      .mainabout div.form form#form div.d-flex label {
         font-weight: 600; }
+      .mainabout div.form form#form div.d-flex input {
+        font-size: 1.6rem; }
 
 footer {
   display: flex;
